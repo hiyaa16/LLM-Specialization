@@ -1,0 +1,201 @@
+[
+  {
+    "case_id": "GC01",
+    "name": "OpenAI Agents SDK handoff",
+    "repository": "openai/openai-agents-python",
+    "source": "examples/handoffs/message_filter.py",
+    "provenance": "example",
+    "expected": {
+      "multi_agent_application": true,
+      "agent_instances": 3,
+      "specialization": "medium",
+      "architecture_primary": "conditional_routing",
+      "interaction_patterns": [
+        "conditional_handoff"
+      ],
+      "explicit_interaction_edges": 1,
+      "confidence": "high"
+    },
+    "notes": "Do not count duplicate streaming example or main() driver calls as additional agents/architecture."
+  },
+  {
+    "case_id": "GC02",
+    "name": "Google ADK sub-agents",
+    "repository": "google/adk-python",
+    "source": "sub_agents example",
+    "provenance": "example",
+    "expected": {
+      "multi_agent_application": true,
+      "agent_instances": 3,
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "interaction_patterns": [
+        "hierarchical_delegation"
+      ],
+      "explicit_interaction_edges": 2,
+      "confidence": "high"
+    },
+    "notes": "root_agent explicitly delegates to info_agent and close_agent."
+  },
+  {
+    "case_id": "GC03",
+    "name": "Google ADK parallel worker",
+    "repository": "google/adk-python",
+    "source": "parallel worker workflow example",
+    "provenance": "example",
+    "expected": {
+      "multi_agent_application": true,
+      "agent_instances": 2,
+      "specialization": "high",
+      "architecture_primary": "parallel",
+      "interaction_patterns": [
+        "parallel",
+        "fan_out_fan_in",
+        "sequential_pre_post"
+      ],
+      "explicit_interaction_edges": 0,
+      "confidence": "high"
+    },
+    "notes": "process_input, make_upper_case and aggregate are workflow/function nodes, not LLM agents. One explain_topic agent may execute repeatedly; do not multiply it into several agents."
+  },
+  {
+    "case_id": "GC04",
+    "name": "Google ADK simple sequential",
+    "repository": "google/adk-python",
+    "source": "legacy simple sequential example",
+    "provenance": "example",
+    "expected": {
+      "multi_agent_application": true,
+      "agent_instances": 2,
+      "specialization": "low",
+      "architecture_primary": "sequential",
+      "interaction_patterns": [
+        "sequential"
+      ],
+      "explicit_interaction_edges": 1,
+      "confidence": "high"
+    },
+    "notes": "SequentialAgent is an orchestration construct, not an additional LLM agent. Different 'say 1'/'say 2' instructions are not meaningful semantic specialization."
+  },
+  {
+    "case_id": "GC05",
+    "name": "AutoGen Chainlit team",
+    "repository": "microsoft/autogen",
+    "source": "python/samples/agentchat_chainlit/app_team.py",
+    "provenance": "example",
+    "expected": {
+      "multi_agent_application": true,
+      "agent_instances": 2,
+      "specialization": "high",
+      "architecture_primary": "iterative_feedback",
+      "interaction_patterns": [
+        "round_robin_group",
+        "iterative_feedback"
+      ],
+      "explicit_interaction_edges": 0,
+      "confidence": "high"
+    },
+    "notes": "assistant generates content; critic provides feedback and APPROVE termination. Do not infer a fixed assistant→critic edge unless directly represented."
+  },
+  {
+    "case_id": "GC06",
+    "name": "CrewAI AI Newsletter",
+    "repository": "bhancockio/crewai-updated-tutorial-hierarchical",
+    "source": "agents.py + main.py",
+    "provenance": "example",
+    "expected": {
+      "multi_agent_application": true,
+      "agent_instances": 4,
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "interaction_patterns": [
+        "hierarchical_delegation",
+        "sequential_task_dependency"
+      ],
+      "explicit_interaction_edges": 0,
+      "confidence": "high"
+    },
+    "notes": "Task dependencies are explicit. Do not invent exact runtime manager→agent edges from the hierarchical process."
+  },
+  {
+    "case_id": "GC07",
+    "name": "LangGraph research assistant",
+    "repository": "ki11e6/langgraph-multi-agent",
+    "source": "agents/graph.py",
+    "provenance": "application",
+    "expected": {
+      "multi_agent_application": true,
+      "agent_instances": 4,
+      "specialization": "high",
+      "architecture_primary": "conditional_graph",
+      "interaction_patterns": [
+        "conditional_routing",
+        "sequential_dependency",
+        "iterative_feedback",
+        "human_in_the_loop"
+      ],
+      "explicit_interaction_edges": 9,
+      "confidence": "high"
+    },
+    "notes": "validate, human_review and other control nodes are not LLM agents. Graph structure is the source of interaction evidence."
+  },
+  {
+    "case_id": "GC08",
+    "name": "MetaGPT customized multi-agent",
+    "repository": "FoundationAgents/MetaGPT",
+    "source": "examples/build_customized_multi_agents.py",
+    "provenance": "example",
+    "expected": {
+      "multi_agent_application": true,
+      "agent_instances": 3,
+      "specialization": "high",
+      "architecture_primary": "event_driven",
+      "interaction_patterns": [
+        "publish_subscribe",
+        "sequential_dependency",
+        "feedback_loop"
+      ],
+      "explicit_interaction_edges": 0,
+      "confidence": "high"
+    },
+    "notes": "_watch() establishes event/subscription dependencies. Do not treat it as proof that every subscribed edge executes on every run."
+  },
+  {
+    "case_id": "GC09",
+    "name": "Agno nested teams",
+    "repository": "agno-agi/agno",
+    "source": "cookbook/03_teams/01_quickstart/nested_teams.py",
+    "provenance": "example",
+    "expected": {
+      "multi_agent_application": true,
+      "agent_instances": 4,
+      "specialization": "high",
+      "architecture_primary": "hierarchical_nested_team",
+      "interaction_patterns": [
+        "nested_team_composition",
+        "hierarchical_coordination",
+        "sequential_team_dependency"
+      ],
+      "explicit_interaction_edges": 0,
+      "confidence": "high"
+    },
+    "notes": "Research Team→Writing Team is explicit from parent instructions. Team objects are orchestration units, not LLM agents. Do not infer internal agent ordering from membership."
+  },
+  {
+    "case_id": "GC10",
+    "name": "AgentScope generic Agent class",
+    "repository": "agentscope-ai/agentscope",
+    "source": "src/agentscope/agent/_agent.py",
+    "provenance": "framework_internal",
+    "expected": {
+      "multi_agent_application": false,
+      "agent_instances": 0,
+      "specialization": "na",
+      "architecture_primary": "na",
+      "interaction_patterns": [],
+      "explicit_interaction_edges": 0,
+      "confidence": "high"
+    },
+    "notes": "Negative control. Generic framework implementation must not be mistaken for an application-level multi-agent system."
+  }
+]
