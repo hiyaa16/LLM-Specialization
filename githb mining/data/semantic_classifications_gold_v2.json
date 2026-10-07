@@ -1,0 +1,92 @@
+[
+  {
+    "system_id": "openai/openai-agents-python::system::0004",
+    "repository": "openai/openai-agents-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The agents have clearly differentiated responsibilities, with the second_agent handling English instructions and the Spanish assistant handling Spanish instructions. The conditional routing mechanism is explicitly used to handoff messages between the agents based on the language, indicating a high level of specialization."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0015",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The root_agent has distinct responsibilities of checking accounts and delegating tasks to sub-agents (info_agent and close_agent). The responsibilities are clearly differentiated, but there is some overlap in the sense that the root_agent is responsible for both checking and closing accounts, which are related tasks."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0025",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'find_related_topics' and 'explain_topic' have distinct responsibilities, but their execution is ordered sequentially. The 'find_related_topics' agent generates related topics, and the 'explain_topic' agent explains the relationship, indicating some specialization. However, the sequential order of execution suggests that their responsibilities are not entirely independent."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0006",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Both sub_agent_1 and sub_agent_2 have distinct and complementary responsibilities (JUST SAY 1 and JUST SAY 2, respectively). The sequential execution order is explicitly defined by the orchestrator_membership interaction evidence, making the architecture primary structure sequential."
+    }
+  },
+  {
+    "system_id": "microsoft/autogen::system::0006",
+    "repository": "microsoft/autogen",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "iterative_feedback",
+      "confidence": "high",
+      "rationale": "The assistant and critic agents have distinct and complementary responsibilities, with the critic providing feedback on the assistant's responses. The iterative feedback mechanism is explicitly used, indicating a clear and specific organizational structure."
+    }
+  },
+  {
+    "system_id": "bhancockio/crewai-updated-tutorial-hierarchical::system::0001",
+    "repository": "bhancockio/crewai-updated-tutorial-hierarchical",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The agents have clearly differentiated responsibilities: news_fetcher_agent fetches news, news_analyzer_agent analyzes news, newsletter_compiler_agent compiles the newsletter, and editor_agent oversees the entire process. The hierarchical architecture is explicitly defined through delegation and composition, making the specialization high."
+    }
+  },
+  {
+    "system_id": "ki11e6/langgraph-multi-agent::system::0001",
+    "repository": "ki11e6/langgraph-multi-agent",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "iterative_feedback",
+      "confidence": "high",
+      "rationale": "The responsibilities of the agents are clearly differentiated: the supervisor decides the next action, the researcher gathers sources, the reviewer critiques, and the writer produces drafts. The iterative feedback loop is evident through the conditional routing and explicit review/revision steps, making the architecture primary."
+    }
+  },
+  {
+    "system_id": "FoundationAgents/MetaGPT::system::0001",
+    "repository": "FoundationAgents/MetaGPT",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents SimpleCoder, SimpleTester, and SimpleReviewer have clearly differentiated responsibilities in the code. SimpleCoder is responsible for writing code, SimpleTester for writing tests, and SimpleReviewer for writing reviews. The sequential execution order is explicitly defined by the `metagpt_hire_sequence` interaction primitive, indicating that the agents follow a strict order of operations without overlapping responsibilities."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0012",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly differentiated responsibilities: Editing Agent focuses on improving clarity and structure, Research Agent gathers references and source material, Analysis Agent extracts key findings and implications, and Writing Agent drafts polished narrative output. These responsibilities are distinct and complementary, and the sequential execution order is explicitly defined in the evidence."
+    }
+  }
+]

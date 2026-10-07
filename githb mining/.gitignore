@@ -4,8 +4,8 @@
 # Cloned repositories (mining input — large, external, reproducible from data/repositories.json)
 repos/
 
-# Generated evidence/audit artifacts (large, reproducible by re-running the miner)
-data/
+# NOTE: data/ is now tracked as the canonical backup of research results
+# (classifications, evidence, repositories.json, run logs). Previously ignored.
 
 # Python
 __pycache__/

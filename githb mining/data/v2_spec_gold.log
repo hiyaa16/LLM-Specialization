@@ -1,0 +1,13 @@
+GC   gold    v1      v2spec   v1ok v2ok
+GC01  medium  high    medium   XX  OK
+GC02  high    high    medium   OK  XX
+GC03  high    medium  high     XX  OK
+GC04  low     low     high     OK  XX
+GC05  high    high    high     OK  OK
+GC06  high    high    high     OK  OK
+GC07  high    high    high     OK  OK
+GC08  high    high    high     OK  OK
+GC09  (no gold spec)
+GC10  (no gold spec)
+
+SPEC gold agreement:  v1=6/8   v2=6/8

@@ -1,0 +1,33 @@
+V6.6 GOLD VALIDATION
+====================================================================================================
+Evidence: D:\internship2026\githb mining\data\evidence_v6_6.json
+Gold: D:\internship2026\githb mining\gold_cases.json
+Semantic: semantic_classifications_v2.json (333 systems labeled)
+Repositories: 504
+
+GC01 REVIEW agents=3/3  edges=2  arch=conditional_routing  spec=high  patterns=conditional_handoff,conditional_routing
+    - Specialization label differs from gold: actual='high', expected='medium'.
+
+GC02 PASS   agents=3/3  edges=2  arch=hierarchical  spec=high  patterns=hierarchical,hierarchical_delegation
+
+GC03 REVIEW agents=2/2  edges=7  arch=parallel  spec=medium  patterns=fan_out_fan_in,parallel,sequential,sequential_pre_post
+    - Specialization label differs from gold: actual='medium', expected='high'.
+
+GC04 PASS   agents=2/2  edges=1  arch=sequential  spec=low  patterns=sequential
+
+GC05 PASS   agents=2/2  edges=1  arch=iterative_feedback  spec=high  patterns=iterative_feedback,round_robin_group
+
+GC06 FAIL   agents=4/4  edges=2  arch=hierarchical  spec=high  patterns=composition,hierarchical,hierarchical_delegation
+    - Required structural interaction evidence is missing: sequential_task_dependency
+
+GC07 PASS   agents=4/4  edges=9  arch=conditional_routing  spec=high  patterns=conditional_routing,feedback_loop,human_in_the_loop,iterative_feedback,sequential
+
+GC08 PASS   agents=3/3  edges=5  arch=event_driven  spec=high  patterns=event_driven,feedback_loop,publish_subscribe,sequential,sequential_task_dependency
+
+GC09 PASS   agents=4/4  edges=4  arch=hierarchical  spec=high  patterns=composition,hierarchical_coordination,nested_team_composition,sequential,sequential_dependency,sequential_team_dependency
+
+GC10 PASS   agents=0/0  edges=0  arch=null  spec=null  patterns=-
+    - Framework-internal Agent class did not become an application-level system.
+
+----------------------------------------------------------------------------------------------------
+SUMMARY: PASS=7 REVIEW=2 FAIL=1 TOTAL=10

@@ -1,0 +1,311 @@
+{
+  "validator_version": "v6.5_evidence_only",
+  "evidence_file": "D:\\internship2026\\githb mining\\data\\evidence_v6_5.json",
+  "miner_rerun": false,
+  "architecture_primary_hard_fail": false,
+  "specialization_auto_scored": false,
+  "results": [
+    {
+      "case_id": "GC01",
+      "name": "OpenAI Agents SDK handoff",
+      "repository": "openai/openai-agents-python",
+      "status": "REVIEW",
+      "errors": [
+        "AGENT_COUNT expected=3 found=2",
+        "MISSED_INTERACTION conditional_handoff"
+      ],
+      "notes": [
+        "architecture_primary expected=conditional_routing found=None; semantic normalization is deferred",
+        "specialization expected=medium; requires semantic annotation, not presence/absence of fields"
+      ],
+      "predicted": {
+        "system_found": true,
+        "agent_count": 2,
+        "responsibility_bearing_agents": 2,
+        "interaction_primitives": [
+          "conditional_routing"
+        ],
+        "architecture_patterns": [
+          "conditional_routing"
+        ],
+        "architecture_primary": null,
+        "explicit_interaction_edges": 1,
+        "confidence": "HIGH"
+      },
+      "raw_audit_counts": {
+        "agents": 193,
+        "interactions": 13
+      }
+    },
+    {
+      "case_id": "GC02",
+      "name": "Google ADK sub-agents",
+      "repository": "google/adk-python",
+      "status": "REVIEW",
+      "errors": [
+        "MISSED_INTERACTION hierarchical_delegation"
+      ],
+      "notes": [
+        "architecture_primary expected=hierarchical found=None; semantic normalization is deferred",
+        "specialization expected=high; requires semantic annotation, not presence/absence of fields"
+      ],
+      "predicted": {
+        "system_found": true,
+        "agent_count": 3,
+        "responsibility_bearing_agents": 3,
+        "interaction_primitives": [
+          "hierarchical"
+        ],
+        "architecture_patterns": [
+          "hierarchical"
+        ],
+        "architecture_primary": null,
+        "explicit_interaction_edges": 2,
+        "confidence": "HIGH"
+      },
+      "raw_audit_counts": {
+        "agents": 235,
+        "interactions": 52
+      }
+    },
+    {
+      "case_id": "GC03",
+      "name": "Google ADK parallel worker",
+      "repository": "google/adk-python",
+      "status": "REVIEW",
+      "errors": [
+        "MISSING_SYSTEM"
+      ],
+      "notes": [],
+      "predicted": {
+        "system_found": false,
+        "agent_count": 0,
+        "responsibility_bearing_agents": 0,
+        "interaction_primitives": [],
+        "architecture_patterns": [],
+        "architecture_primary": null,
+        "explicit_interaction_edges": 0,
+        "confidence": null
+      },
+      "raw_audit_counts": {
+        "agents": 235,
+        "interactions": 52
+      }
+    },
+    {
+      "case_id": "GC04",
+      "name": "Google ADK simple sequential",
+      "repository": "google/adk-python",
+      "status": "REVIEW",
+      "errors": [
+        "AGENT_COUNT expected=2 found=3"
+      ],
+      "notes": [
+        "edge_count expected=1 found=2",
+        "architecture_primary expected=sequential found=None; semantic normalization is deferred",
+        "specialization expected=low; requires semantic annotation, not presence/absence of fields"
+      ],
+      "predicted": {
+        "system_found": true,
+        "agent_count": 3,
+        "responsibility_bearing_agents": 2,
+        "interaction_primitives": [
+          "hierarchical",
+          "sequential"
+        ],
+        "architecture_patterns": [
+          "hierarchical",
+          "sequential"
+        ],
+        "architecture_primary": null,
+        "explicit_interaction_edges": 2,
+        "confidence": "HIGH"
+      },
+      "raw_audit_counts": {
+        "agents": 235,
+        "interactions": 52
+      }
+    },
+    {
+      "case_id": "GC05",
+      "name": "AutoGen Chainlit team",
+      "repository": "microsoft/autogen",
+      "status": "REVIEW",
+      "errors": [
+        "MISSED_INTERACTION round_robin_group"
+      ],
+      "notes": [
+        "architecture_primary expected=iterative_feedback found=None; semantic normalization is deferred",
+        "specialization expected=high; requires semantic annotation, not presence/absence of fields"
+      ],
+      "predicted": {
+        "system_found": true,
+        "agent_count": 2,
+        "responsibility_bearing_agents": 2,
+        "interaction_primitives": [
+          "iterative_feedback"
+        ],
+        "architecture_patterns": [
+          "iterative_feedback"
+        ],
+        "architecture_primary": null,
+        "explicit_interaction_edges": 0,
+        "confidence": "HIGH"
+      },
+      "raw_audit_counts": {
+        "agents": 95,
+        "interactions": 15
+      }
+    },
+    {
+      "case_id": "GC06",
+      "name": "CrewAI AI Newsletter",
+      "repository": "bhancockio/crewai-updated-tutorial-hierarchical",
+      "status": "REVIEW",
+      "errors": [
+        "MISSED_INTERACTION hierarchical_delegation,sequential_task_dependency"
+      ],
+      "notes": [
+        "architecture_primary expected=hierarchical found=None; semantic normalization is deferred",
+        "specialization expected=high; requires semantic annotation, not presence/absence of fields"
+      ],
+      "predicted": {
+        "system_found": true,
+        "agent_count": 4,
+        "responsibility_bearing_agents": 4,
+        "interaction_primitives": [
+          "composition",
+          "hierarchical"
+        ],
+        "architecture_patterns": [
+          "hierarchical"
+        ],
+        "architecture_primary": null,
+        "explicit_interaction_edges": 0,
+        "confidence": "HIGH"
+      },
+      "raw_audit_counts": {
+        "agents": 4,
+        "interactions": 2
+      }
+    },
+    {
+      "case_id": "GC07",
+      "name": "LangGraph research assistant",
+      "repository": "ki11e6/langgraph-multi-agent",
+      "status": "REVIEW",
+      "errors": [
+        "MISSED_INTERACTION human_in_the_loop,iterative_feedback,sequential_dependency"
+      ],
+      "notes": [
+        "edge_count expected=9 found=3",
+        "architecture_primary expected=conditional_graph found=None; semantic normalization is deferred",
+        "specialization expected=high; requires semantic annotation, not presence/absence of fields"
+      ],
+      "predicted": {
+        "system_found": true,
+        "agent_count": 4,
+        "responsibility_bearing_agents": 4,
+        "interaction_primitives": [
+          "conditional_routing",
+          "sequential"
+        ],
+        "architecture_patterns": [
+          "conditional_routing",
+          "sequential"
+        ],
+        "architecture_primary": null,
+        "explicit_interaction_edges": 3,
+        "confidence": "HIGH"
+      },
+      "raw_audit_counts": {
+        "agents": 4,
+        "interactions": 7
+      }
+    },
+    {
+      "case_id": "GC08",
+      "name": "MetaGPT customized multi-agent",
+      "repository": "FoundationAgents/MetaGPT",
+      "status": "REVIEW",
+      "errors": [
+        "MISSED_INTERACTION feedback_loop,publish_subscribe,sequential_dependency"
+      ],
+      "notes": [
+        "architecture_primary expected=event_driven found=None; semantic normalization is deferred",
+        "specialization expected=high; requires semantic annotation, not presence/absence of fields"
+      ],
+      "predicted": {
+        "system_found": true,
+        "agent_count": 3,
+        "responsibility_bearing_agents": 3,
+        "interaction_primitives": [
+          "event_driven"
+        ],
+        "architecture_patterns": [
+          "event_driven"
+        ],
+        "architecture_primary": null,
+        "explicit_interaction_edges": 0,
+        "confidence": "HIGH"
+      },
+      "raw_audit_counts": {
+        "agents": 35,
+        "interactions": 12
+      }
+    },
+    {
+      "case_id": "GC09",
+      "name": "Agno nested teams",
+      "repository": "agno-agi/agno",
+      "status": "REVIEW",
+      "errors": [
+        "MISSED_INTERACTION hierarchical_coordination,nested_team_composition,sequential_team_dependency"
+      ],
+      "notes": [
+        "architecture_primary expected=hierarchical_nested_team found=None; semantic normalization is deferred",
+        "specialization expected=high; requires semantic annotation, not presence/absence of fields"
+      ],
+      "predicted": {
+        "system_found": true,
+        "agent_count": 4,
+        "responsibility_bearing_agents": 4,
+        "interaction_primitives": [
+          "composition"
+        ],
+        "architecture_patterns": [],
+        "architecture_primary": null,
+        "explicit_interaction_edges": 0,
+        "confidence": "HIGH"
+      },
+      "raw_audit_counts": {
+        "agents": 2941,
+        "interactions": 181
+      }
+    },
+    {
+      "case_id": "GC10",
+      "name": "AgentScope generic Agent class",
+      "repository": "agentscope-ai/agentscope",
+      "status": "PASS",
+      "errors": [],
+      "notes": [
+        "raw audit detections retained=12; acceptable because candidate system count is zero"
+      ],
+      "predicted": {
+        "system_found": false,
+        "agent_count": 0,
+        "responsibility_bearing_agents": 0,
+        "interaction_primitives": [],
+        "architecture_patterns": [],
+        "architecture_primary": null,
+        "explicit_interaction_edges": 0,
+        "confidence": null
+      },
+      "raw_audit_counts": {
+        "agents": 12,
+        "interactions": 0
+      }
+    }
+  ]
+}

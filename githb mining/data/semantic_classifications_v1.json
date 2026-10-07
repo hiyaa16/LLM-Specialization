@@ -1,0 +1,3332 @@
+[
+  {
+    "system_id": "3600818203/DataAgent::system::0001",
+    "repository": "3600818203/DataAgent",
+    "classification": {
+      "specialization": "unresolved",
+      "architecture_primary": "sequential",
+      "confidence": "medium",
+      "rationale": "The evidence indicates a sequential architecture through the use of `langgraph_add_edge` for sequential execution, but the agents' responsibilities are not specified, making specialization unclear."
+    }
+  },
+  {
+    "system_id": "ag2ai/ag2::system::0001",
+    "repository": "ag2ai/ag2",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Both agents 'bare' and 'drive' share the same responsibility of handling 'prompt' fields, indicating overlapping responsibilities. The evidence also shows a sequential interaction pattern, suggesting an ordered execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0001",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities: the Bull Analyst is tasked with making a strong case for investing in a stock, while the Bear Analyst is tasked with making a strong case against it. The sequential architecture is implied by the composition interaction primitive, indicating that the agents may be executed in a specific order, though the exact order is not specified."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0002",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The Planner and Writer agents have clearly defined, complementary responsibilities. The Planner is responsible for task planning and splitting work into steps, while the Writer is responsible for drafting summaries. The evidence of a 'composition' interaction primitive suggests an ordered, dependent execution where the Planner's output is used by the Writer, indicating a sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0003",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The agents are clearly specialized with distinct language responsibilities. The evidence of conditional routing in the interaction evidence supports a conditional_routing architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0004",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "parallel",
+      "confidence": "high",
+      "rationale": "The agents 'Reddit Researcher' and 'HackerNews Researcher' have distinct responsibilities focused on different platforms. The interaction evidence indicates a parallel execution model through the use of broadcast execution, which is explicitly supported by the evidence."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0005",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The evidence shows three distinct agents (Weather Agent, Activities Agent, News Agent) each with a clear, non-overlapping responsibility. The interaction evidence indicates the use of conditional routing, which suggests a well-defined, specialized role for each agent."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0006",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The German and Spanish agents have clearly differentiated responsibilities, answering questions in their respective languages. The evidence also shows conditional routing, indicating that the agents are selected based on the language of the question, which further supports high specialization."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0007",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The German and Spanish agents have clearly defined, non-overlapping responsibilities. The conditional routing evidence indicates that there is an explicit mechanism for routing interactions based on the type of question, further supporting the specialization."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0008",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "single_agent",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but the evidence only shows they are members of the same team without explicit interaction edges, suggesting a single-agent architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0009",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "parallel",
+      "confidence": "high",
+      "rationale": "The evidence shows two agents, Hackernews Agent and News Agent, each with distinct responsibilities. However, there is no explicit interaction evidence, suggesting they may operate in parallel without direct communication."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0010",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "single_agent",
+      "confidence": "high",
+      "rationale": "The agents 'Researcher' and 'Writer' have overlapping responsibilities and are not clearly differentiated. The evidence only shows that they are part of the same team through composition, but there is no explicit interaction or division of labor between them."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0011",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "parallel",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent (Designer, Product Manager, Engineer). The interaction evidence indicates a parallel architecture through the use of broadcast mode, which is explicitly supported by the evidence."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0012",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly differentiated responsibilities: Editing Agent focuses on improving clarity and structure, Research Agent gathers references and source material, Analysis Agent extracts key findings and implications, and Writing Agent drafts polished narrative output. The interaction evidence shows a sequential dependency where the Research Agent's output is used by the Writing Agent, indicating a clear specialization and a sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0013",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for Architect, Researcher, and Writer. The hierarchical interaction evidence indicates an explicit supervisor/delegation structure."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0014",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "parallel",
+      "confidence": "high",
+      "rationale": "The agents 'Optimist', 'Realist', and 'Pessimist' have clearly differentiated roles and instructions, indicating high specialization. The interaction evidence shows a parallel execution mode, which is the primary architectural mechanism."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0015",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "parallel",
+      "confidence": "high",
+      "rationale": "The agents 'Opponent' and 'Proponent' have clearly differentiated responsibilities, with 'Opponent' arguing against the proposition and 'Proponent' arguing in favor. The interaction evidence indicates a parallel execution model through the 'agno_team_mode_broadcast' mechanism."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0016",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "parallel",
+      "confidence": "high",
+      "rationale": "The agents have clearly differentiated responsibilities, with each focused on a specific type of research (trend analysis, web research, and Hacker News research). The interaction evidence indicates a parallel execution model, where the agents operate independently without direct interaction."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0017",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "parallel",
+      "confidence": "high",
+      "rationale": "The agents 'Opponent' and 'Proponent' have clearly defined and distinct responsibilities, arguing for and against the proposition respectively. The interaction evidence indicates a parallel execution model, where both agents operate independently."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0018",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for the 'researcher' and 'writer' agents. The interaction evidence indicates a sequential dependency where the 'researcher' agent's output is used by the 'writer' agent, aligning with the 'sequential' architecture pattern."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0019",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The web_searcher and hacker_news_researcher agents have clearly defined, non-overlapping responsibilities. The evidence indicates a coordination mechanism, suggesting an ordered execution where one agent completes its task before the next begins."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0020",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The Market Analyst and Risk Analyst have clearly differentiated responsibilities focused on market analysis and risk assessment, respectively. The evidence of coordination suggests an ordered execution, indicative of a sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0021",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The evidence shows that each agent (English, French, Spanish) has a distinct responsibility to respond in a specific language, and there is conditional routing evidence indicating that the system routes input to the appropriate agent based on the language, suggesting clear specialization."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0022",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The evidence shows three distinct agents with clear, specialized roles: Code Specialist, Science Specialist, and Math Specialist. Each agent has a unique set of responsibilities and instructions, indicating high specialization. The primary architecture is conditional routing, as evidenced by the `agno_team_mode_route` interaction pattern."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0023",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent (General Assistant, SQL Expert, Python Expert). The conditional routing interaction primitive indicates that questions are routed to the most appropriate agent based on their expertise, ensuring that each agent handles tasks within their domain of responsibility."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0024",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities: Editor for content review, Planner for creating outlines, and Writer for content creation. The hierarchical architecture is explicitly supported by the evidence."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0025",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for frontend, backend, and devops reviewers. The hierarchical architecture is explicitly supported by the evidence."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0026",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The agents 'Analyst', 'Data Collector', and 'Report Writer' have clearly defined, complementary responsibilities. The hierarchical interaction evidence and interaction primitives further support this specialization."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0027",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent (Critic, Researcher, Writer). The interaction evidence and architecture patterns also indicate a hierarchical structure where one agent (Critic) provides feedback to the others, suggesting a supervisor-delegation structure."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0028",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization among the agents (Market Analyst, Tech Analyst, Financial Analyst) with distinct roles and instructions. The interaction evidence and architecture patterns also indicate a hierarchical structure where one agent (likely a supervisor) coordinates the others."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0029",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The web researcher and summarizer agents have clearly defined, complementary responsibilities. The hierarchical interaction evidence indicates a supervisor/delegation structure where the web researcher provides information to the summarizer, which aligns with the provided evidence."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0030",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The evidence clearly defines three distinct roles (Executor, Planner, Reviewer) with clear, non-overlapping responsibilities. The hierarchical architecture is explicitly supported by the evidence."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0031",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent. The interaction evidence indicates a strict hierarchical and sequential execution where each agent's output is a prerequisite for the next agent's input."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0032",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The agents 'Financial Calculator', 'Financial Advisor', and 'Risk Assessor' have clearly defined, complementary responsibilities. The hierarchical architecture is explicitly supported by the evidence, indicating a supervisor/delegation structure."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0033",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for 'Analyst' and 'Researcher' roles. The hierarchical interaction evidence further supports this specialization through a supervisor/delegation structure."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0034",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The agents 'Summarizer' and 'Researcher' have clearly defined, complementary responsibilities. The hierarchical interaction evidence and architecture pattern further support this specialization."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0035",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The agents 'Researcher' and 'Writer' have clearly differentiated responsibilities, with the 'Researcher' focusing on research and the 'Writer' on content writing. The hierarchical interaction evidence indicates a supervisor-delegation structure, where the 'Researcher' provides information to the 'Writer'."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0036",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The Wikipedia Agent and Website Agent have distinct responsibilities of searching for information from different sources. However, the evidence suggests a sequential execution model through composition, indicating that one agent's task must complete before the next begins."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0037",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities: Technical Analyst for technical investigations and Billing Specialist for billing and invoicing. There is no evidence of concurrent or distributed execution, suggesting a sequential workflow."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0038",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The Medical Writer Agent and Medical Reader Agent have clearly defined, non-overlapping responsibilities of writing and reading medical data, respectively. The presence of conditional routing evidence indicates that these agents operate in a coordinated manner based on specific conditions, further supporting high specialization."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0039",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Both agents have similar responsibilities of searching for information, and there is no evidence of parallel or distributed execution. The composition interaction primitive suggests a sequential order, but the evidence is limited to team membership only."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0040",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "parallel",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for the 'hackernews_agent' and 'web_researcher'. The interaction evidence indicates a parallel architecture through the use of broadcast execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0041",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for 'Stock Searcher' and 'Company Info Searcher'. There is also explicit conditional routing between the agents, indicating a well-defined interaction pattern."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0042",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Itinerary Planner' and 'Weather Expert' have distinct responsibilities but their interaction is inferred solely from team membership, suggesting a sequential or ordered execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0043",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for 'Stock Searcher' and 'Company Info Searcher'. There is also explicit conditional routing between the agents, indicating a well-defined interaction mechanism."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0044",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The evidence shows clear differentiation in responsibilities between the 'Stock Searcher' and 'Company Info Searcher' agents, with no overlap in their instructions. Additionally, the evidence indicates the use of conditional routing, which suggests a structured and explicit method for directing tasks between agents."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0045",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Both agents have the same responsibility of searching the web for information on a stock. The evidence only shows a composition relationship, which suggests sequential execution, but the agents do not have distinct responsibilities."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0046",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Analyst' and 'Researcher' have distinct responsibilities but the evidence only shows a composition relationship, implying a sequential execution where one agent's output is used by the other. There is no explicit evidence of parallel or concurrent execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0047",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Researcher' and 'Writer' have distinct responsibilities, but there is no evidence of concurrent or parallel execution. The composition interaction primitive suggests an ordered sequence of operations."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0048",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The agents have clearly differentiated responsibilities: Triage Agent handles initial customer contact and issue classification, Technical Support handles technical issues and escalations, Database Expert diagnoses database performance and connectivity issues, and Security Expert investigates security concerns and access issues. The evidence also shows conditional routing, indicating a structured decision-making process for task assignment among agents."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0049",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for the Writer and Data Analyst agents. Additionally, the presence of conditional routing through nested team composition indicates a well-defined, conditional interaction mechanism."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0050",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "unresolved",
+      "architecture_primary": "single_agent",
+      "confidence": "medium",
+      "rationale": "The evidence indicates that the agents are part of a team through composition, but there is no clear indication of distinct responsibilities or an explicit architecture pattern. Given the lack of detailed responsibilities and explicit interaction edges, the specialization and primary architecture cannot be confidently classified."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0051",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Both agents have distinct responsibilities (searching Hacker News and the website) and are composed together, indicating a sequential execution order."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0052",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Stock Searcher' and 'Company Info Searcher' have clearly differentiated responsibilities, with 'Stock Searcher' focusing on stock information and 'Company Info Searcher' on company information. The evidence of 'composition' interaction primitive suggests an ordered execution, indicating a sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0053",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities (escalation management and customer support), but the evidence suggests a sequential execution model through composition, where one agent's task completion may trigger the next."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0054",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'business_analyst' and 'tech_researcher' have clearly differentiated responsibilities focused on distinct areas of expertise. The evidence does not suggest any parallel or concurrent execution, indicating a sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0055",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows that the agents have distinct responsibilities related to business and technology analysis, but there is no explicit evidence of concurrent or parallel execution. The interaction evidence is limited to team membership only, suggesting a sequential execution order."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0056",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'business_analyst' and 'tech_researcher' have clearly differentiated responsibilities focused on distinct areas of expertise. The evidence of composition (team membership) does not imply concurrent execution, suggesting a sequential workflow."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0057",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Each agent has a distinct responsibility, such as 'Do analysis on Github repositories', 'Search the web for information', 'Get financial data', 'Calculate', 'Run Python code locally', 'Write content', 'Execute and test code', 'Help answer questions about the Agno framework', and 'Medical researcher'. The evidence shows that these agents are composed together, suggesting a sequential execution where one agent's task might be completed before another's begins, but there is no explicit evidence of parallel or other concurrent execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0058",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Researcher' and 'Writer' have clearly defined, complementary responsibilities. The 'composition' interaction primitive indicates an ordered execution where the Researcher's output is used by the Writer, suggesting a sequential flow."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0059",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Data Analyst' and 'Strategy Advisor' have distinct responsibilities, but the evidence only shows a composition relationship, suggesting an ordered/dependent execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0060",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents, Technical Lead and Project Manager, have distinct responsibilities but the evidence only supports a composition relationship, indicating sequential execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0061",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The DevOps Engineer and Security Reviewer have clearly defined, non-overlapping responsibilities. The evidence of composition (team membership) suggests an ordered execution where one agent's task completion is a prerequisite for the next, indicating sequential execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0062",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'SRE Engineer' and 'Platform Engineer' have clearly differentiated responsibilities, with no evidence of concurrent or distributed execution. The composition interaction primitive suggests an ordered execution, aligning with a sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0063",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Solutions Architect' and 'Cost Analyst' have clearly defined, distinct responsibilities that do not overlap. The evidence of composition (team membership) suggests an ordered execution where one agent's task completion is a prerequisite for the next, indicating a sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0064",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Researcher' and 'Writer' have clearly defined, non-overlapping responsibilities. The 'composition' interaction primitive indicates that these agents are part of a sequential workflow, where one completes their task before the next begins."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0065",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Analyst' and 'Advisor' have distinct responsibilities but their interaction is through composition, suggesting an ordered execution where one agent's output is used by the other. There is no evidence of parallel or concurrent execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0066",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Summarizer' and 'Researcher' have distinct responsibilities but the evidence only supports a composition interaction primitive, indicating sequential execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0067",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents Executor and Planner have distinct responsibilities (execute tasks vs create plans), but the evidence only supports a composition relationship, suggesting an ordered execution where the Planner generates tasks for the Executor to execute."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0068",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined, specialized roles with no evidence of parallel or concurrent execution. The interaction evidence is limited to team membership only, indicating a sequential workflow where each agent's input is processed in a predefined order."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0069",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows that the researcher and writer agents have distinct responsibilities, with the researcher focusing on research topics and the writer on writing summaries and essays. However, there is sequential execution where the researcher's actions lead to the writer's actions, indicating some overlap in the workflow."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0070",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "single_agent",
+      "confidence": "high",
+      "rationale": "Both agents are part of a team membership only, with no explicit interaction edges or defined responsibilities that show clear differentiation or execution order. The composition interaction primitive suggests a team structure but does not indicate sequential or parallel execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0071",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities: Editor, Writer, Researcher, and Analyst. The evidence also shows a hierarchical structure through the use of nested_team_composition, indicating a supervisor-delegation structure."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0072",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "single_agent",
+      "confidence": "high",
+      "rationale": "Both agents, Sarah and Mike, have distinct roles but are not shown to interact or have separate responsibilities that would indicate specialization. The evidence only shows they are part of the same team without any explicit interaction."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0073",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Agents have clearly differentiated responsibilities, with each agent performing a distinct task in the sequence of operations. The evidence shows a clear sequential dependency where the Vector Retriever, Hybrid Searcher, Data Validator, and Response Composer each have specific roles that do not overlap significantly."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0074",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities, with no overlap in their roles. The interaction evidence shows a strict sequential dependency, where each agent's task is completed in a specific order."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0075",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities, with no overlap in their roles. The interaction evidence shows a strict sequential order of execution, where the initial_retriever agent provides data to the reranking_specialist, context_analyzer, and final_synthesizer agents in that order."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0076",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities: Content Analyzer, Response Synthesizer, and Knowledge Searcher. The interaction evidence shows a strict sequential dependency where the Knowledge Searcher retrieves information, which is then analyzed by the Content Analyzer, and finally synthesized by the Response Synthesizer. This indicates a high level of specialization and a sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0077",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Agents have clearly defined and distinct responsibilities with a strong sequential dependency, indicating high specialization."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0078",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Agents have clearly defined and distinct responsibilities with no overlap. The primary searcher performs broad searches, the secondary searcher handles specific searches, the cross-reference validator ensures consistency, and the result synthesizer combines and ranks all results. The interaction evidence shows a sequential dependency where the primary searcher orchestrates the other agents in a specific order."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0079",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'ProfileAnalyst' and 'ContextAnalyst' have distinct responsibilities but their interaction is through composition, suggesting an ordered execution where one agent's output is used by the other. There is no evidence of parallel or concurrent execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0080",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'team_lead' and 'data_analyst' have clearly defined, complementary responsibilities. The 'team_lead' focuses on leadership and strategic insights, while the 'data_analyst' specializes in data analysis and performance metrics. The evidence of composition (team membership) suggests an ordered, sequential interaction where the 'team_lead' may provide strategic direction to the 'data_analyst' for data-driven insights."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0081",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'ProfileAnalyst' and 'ContextAnalyst' have distinct responsibilities, but their interaction is through composition, suggesting an ordered execution where one agent's output is used by the other. There is no evidence of concurrent or parallel execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0082",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Researcher' and 'Writer' have clearly defined, complementary responsibilities. The 'composition' interaction primitive indicates an ordered execution where the Researcher's findings are used by the Writer, suggesting a sequential flow."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0083",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Researcher' and 'Writer' have clearly differentiated responsibilities, with the Researcher focusing on research and the Writer on summarizing findings. The evidence of composition (agents being part of a team) suggests an ordered execution, indicating a sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0084",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The Sentiment Analyst and Audio Transcriber have distinct responsibilities, but the evidence suggests a sequential execution where the Transcriber's output is used by the Analyst. There is no evidence of parallel or peer-to-peer interaction."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0085",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for the 'Transcription Specialist' and 'Content Analyzer' agents. The interaction evidence indicates a sequential dependency where the 'Transcription Specialist' agent processes audio first, and then the 'Content Analyzer' agent analyzes the transcribed content. This structure supports a high level of specialization."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0086",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for 'image_generator' and 'prompt_engineer'. The interaction evidence indicates a sequential dependency where the 'prompt_engineer' agent provides instructions to the 'image_generator' agent, following a defined sequence."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0087",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Image Transformer' and 'Style Advisor' have clearly differentiated responsibilities, with 'Image Transformer' handling the transformation of images and 'Style Advisor' providing style recommendations. The sequential interaction evidence indicates that the Style Advisor's recommendations are used as input for the Image Transformer, showing a clear dependency and complementary nature of their roles."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0088",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for the 'image_analyst' and 'script_writer' agents. The interaction evidence indicates a sequential dependency where the 'image_analyst' agent's output is directly used by the 'script_writer' agent, following a structured sequence of tasks."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0089",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for 'Creative Writer' and 'Image Analyst'. The interaction evidence indicates a sequential dependency where the 'Image Analyst' processes the image first, and then the 'Creative Writer' uses the analysis to create a story, following a strict order of operations."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0090",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, with the Caption Generator handling caption generation and embedding, and the Video Processor managing video and audio processing. However, there is no evidence of explicit interaction or parallel execution, suggesting a sequential workflow."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0091",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The evidence shows two agents with distinct responsibilities: 'Shopping List Agent' and 'Recipe Suggester'. The 'Shopping List Agent' manages the shopping list, while the 'Recipe Suggester' suggests recipes based on available ingredients. The presence of 'nested_team_composition' indicates a hierarchical structure where one agent (Shopping List Agent) likely coordinates or supervises the other (Recipe Suggester)."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0092",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is no explicit interaction evidence. The 'composition' interaction primitive suggests a sequential flow where one agent's output is used by another, but this is not strongly supported by the evidence."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0093",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "parallel",
+      "confidence": "high",
+      "rationale": "The agents 'Summarizer' and 'Researcher' have distinct responsibilities, but the evidence indicates a parallel architecture where both agents are executed concurrently. This suggests some specialization but with overlapping execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0094",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have some distinct responsibilities, with the 'summarizer' having a clear responsibility of summarizing information, while the 'remote_explorer' has no explicit responsibilities listed. The evidence suggests a sequential architecture through the use of composition, indicating an ordered execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0095",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'weather-agent' and 'population-agent' have clearly defined, non-overlapping responsibilities (answering weather and population questions, respectively). The evidence of composition (team membership) suggests an ordered execution, indicative of a sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0096",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The platform engineer and platform manager have distinct responsibilities, but there is no evidence of concurrent execution or direct communication between them. The interaction is mediated through a composition structure, indicating an ordered sequence of operations."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0097",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The agents have clearly differentiated responsibilities: Platform Builder focuses on building components, Platform Engineer on diagnosing issues, and Platform Manager on tracking ownership and health. The composition interaction primitive suggests a hierarchical structure where these roles likely interact in a supervisor-delegation manner."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0098",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities that do not overlap. The sequence of steps is explicitly defined through the composition interaction primitive, indicating a sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0099",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities (web_agent, hackernews_agent, writer_agent) but their execution appears to be in a sequence as indicated by the composition interaction primitive, suggesting an ordered/dependent execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0100",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is no explicit interaction evidence. They are composed in a sequence, suggesting a sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0101",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is no explicit interaction evidence. The 'composition' interaction primitive suggests a sequential workflow where one agent's output is used by the next, but this is not strongly supported by the evidence."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0102",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is no evidence of parallel or concurrent execution. The interaction evidence is limited to composition, suggesting a sequential workflow."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0103",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is no explicit interaction evidence to suggest parallel or other concurrent execution. The evidence indicates a sequential workflow through composition."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0104",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is no explicit interaction evidence to suggest parallel or peer-to-peer execution. The evidence indicates a sequential workflow through composition, where one agent's output is used by another."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0105",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is no evidence of parallel or concurrent execution. The composition interaction primitive suggests an ordered execution, aligning with a sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0106",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is no explicit interaction evidence to suggest parallel or other concurrent execution. The evidence indicates a sequential workflow through composition."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0107",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is no explicit interaction evidence to suggest parallel or peer-to-peer execution. The evidence indicates a sequential workflow through composition, where one agent's output is used by another."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0108",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities: StepCoordinator handles coordination, StepManager manages steps, and StatusManager handles step statuses. These responsibilities are not overlapping and are complementary, indicating high specialization. The evidence also shows a hierarchical structure through the use of composition, where the StepCoordinator orchestrates the other two agents."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0109",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is no explicit interaction evidence to suggest parallel or peer-to-peer communication. The evidence indicates a sequential workflow through composition, where one agent's output is used by another."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0110",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is no evidence of parallel or concurrent execution. The interaction evidence is limited to composition, suggesting a sequential workflow."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0111",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "parallel",
+      "confidence": "high",
+      "rationale": "Each agent has a distinct role with specific responsibilities, and the evidence indicates a parallel architecture where tasks are delegated to all members simultaneously."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0112",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities (web_agent, hackernews_agent, writer_agent), but the evidence suggests a sequential execution model through composition, indicating that one agent's output is used as input for the next without explicit parallelism or peer-to-peer communication."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0113",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities (Fetcher, Processor, Saver), but the conditional_routing interaction evidence suggests some overlap in the decision-making process, indicating that the responsibilities are not fully specialized."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0114",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Researcher' and 'Writer' have clearly differentiated responsibilities, with no evidence of concurrent or parallel execution. The 'composition' interaction primitive indicates a sequential workflow where the output of one agent serves as input for the next."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0115",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Researcher' and 'Writer' have clearly defined, complementary responsibilities. The Researcher is tasked with finding and summarizing relevant source material, while the Writer is responsible for synthesizing this research into a brief. The evidence of 'composition' indicates an ordered or dependent execution, suggesting a sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0116",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The technical specialist and documentation specialist have clearly differentiated responsibilities, with no evidence of parallel or concurrent execution. The composition interaction primitive indicates a sequential workflow where one agent's task completion is a prerequisite for the next."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0117",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "unresolved",
+      "architecture_primary": "parallel",
+      "confidence": "high",
+      "rationale": "The evidence indicates a parallel architecture through the use of `agno_legacy_delegate_to_all_members`, but there is no clear evidence of distinct responsibilities for the agents."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0118",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Remote Assistant' and 'Remote Researcher' have clearly differentiated responsibilities, with the assistant focusing on arithmetic and the researcher on technical explanations. The evidence of composition (team membership) suggests an ordered execution, indicating a sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0119",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Billing Specialist' and 'Technical Specialist' have clearly differentiated responsibilities, with no evidence of concurrent or distributed execution. The composition interaction primitive suggests an ordered execution, aligning with a sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0120",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Web Searcher' and 'HackerNews Researcher' have distinct responsibilities, but their interaction is inferred solely from team membership, suggesting a sequential execution where one agent's task might complete before the next begins."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0121",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Both agents, Web Searcher and HackerNews Researcher, have distinct responsibilities but are not shown to interact or execute in parallel. The evidence only indicates that they are part of the same team, suggesting a sequential execution order."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0122",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is no evidence of explicit interaction or parallel execution. The 'composition' interaction primitive suggests a sequential order, but it is not explicitly defined."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0123",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Web Searcher' and 'HackerNews Researcher' have distinct responsibilities, but their interaction is implied through composition, suggesting a sequential execution order. There is no evidence of parallel or concurrent execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0124",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is no explicit interaction evidence to suggest parallel or other concurrent execution. The composition interaction primitive indicates a sequential order, but the evidence is limited to membership only, not ordered execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0125",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Both agents, Web Searcher and HackerNews Researcher, have distinct responsibilities but are not shown to interact or execute in parallel. The evidence suggests a sequential execution model where one agent's task is completed before the next begins."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0126",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is no explicit interaction evidence to suggest parallel or peer-to-peer communication. The evidence indicates a sequential execution through composition, where one agent's output is likely used by another."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0127",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Both agents, Web Searcher and HackerNews Researcher, are part of a team through composition, indicating sequential execution. However, their responsibilities are distinct and do not overlap, but the level of specialization is not high due to the limited evidence of interaction."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0128",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Web Searcher' and 'HackerNews Researcher' have distinct responsibilities but their interaction is through composition, suggesting a sequential execution where one agent's output might be used by the other. There is no evidence of parallel or concurrent execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0129",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "single_agent",
+      "confidence": "high",
+      "rationale": "Both agents are members of the same team but their responsibilities are distinct (web searching vs. HackerNews story retrieval), but the evidence only supports a team membership relationship without explicit interaction edges, suggesting a single-agent architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0130",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Web Searcher' and 'HackerNews Researcher' have distinct responsibilities, but their interaction is inferred solely from team membership, suggesting a sequential or ordered execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0131",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is no explicit interaction evidence to suggest parallel or peer-to-peer execution. The composition interaction primitive indicates a sequential order of operations."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0132",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Web Searcher' and 'HackerNews Researcher' have distinct responsibilities, but their interaction is inferred solely from team membership, suggesting a sequential execution where one agent's task completion is a prerequisite for the next."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0133",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is no explicit interaction evidence to suggest parallel or other concurrent execution. The composition interaction primitive indicates a sequential order, but the evidence is limited to membership only, not ordered execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0134",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Web Searcher' and 'HackerNews Researcher' have distinct responsibilities but their interaction is through composition, suggesting an ordered execution where one agent's output might be used by the other. There is no evidence of parallel or concurrent execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0135",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is no explicit interaction evidence to suggest parallel or other concurrent execution. The composition interaction primitive indicates a sequential order, but the evidence is limited to membership only, not ordered execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0136",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Both agents, Web Searcher and HackerNews Researcher, have distinct responsibilities but are not shown to interact or execute in parallel. The evidence suggests a sequential execution as they are part of the same team without explicit interaction edges."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0137",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Both agents, Web Searcher and HackerNews Researcher, have distinct responsibilities but are not shown to interact or execute in parallel. The evidence suggests a sequential execution model where one agent's task is completed before the next begins."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0138",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is no explicit interaction evidence to suggest parallel or peer-to-peer execution. The composition interaction primitive indicates a sequential order of operations."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0139",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Web Searcher' and 'HackerNews Researcher' have distinct responsibilities but their interaction is through composition, suggesting an ordered execution where one agent's output might be used by the other. There is no evidence of parallel or concurrent execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0140",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is no explicit interaction evidence to suggest parallel or other concurrent execution. The composition interaction primitive indicates a sequential order, but the evidence is limited to membership only, not ordered execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0141",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "single_agent",
+      "confidence": "high",
+      "rationale": "Both agents are part of a team and their responsibilities are focused on different tasks (web searching and HackerNews story retrieval), but there is no evidence of explicit interaction or differentiation in their execution. The evidence only indicates team membership, which does not provide enough information to determine a clear specialization level or architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0142",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is no explicit interaction evidence to suggest a parallel or peer-to-peer architecture. The evidence indicates a sequential execution through composition."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0143",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Web Searcher' and 'HackerNews Researcher' have distinct responsibilities but their interaction is through composition, suggesting an ordered execution where one agent's output might be used by the other. There is no evidence of concurrent execution or a more complex architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0144",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is no explicit interaction evidence to suggest a parallel or peer-to-peer architecture. The composition interaction primitive indicates a sequential execution order."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0145",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for the English and Spanish agents. The interaction evidence indicates conditional routing, which is the primary architectural mechanism."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0146",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Researcher' and 'Writer' have clearly defined and distinct responsibilities that do not overlap. The evidence of composition (team membership) suggests an ordered execution where one agent's task completion is a prerequisite for the next. This indicates a high level of specialization and sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0147",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Researcher' and 'Writer' have clearly defined, non-overlapping responsibilities. The evidence of 'composition' interaction primitive suggests an ordered execution where one agent's task is completed before the next begins, aligning with a sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0148",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Both agents have similar responsibilities (answering questions) and are only compositionally linked, indicating weak specialization. The sequential architecture is inferred from the lack of explicit interaction edges."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0149",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "single_agent",
+      "confidence": "high",
+      "rationale": "Both agents have distinct responsibilities but are not interacting, suggesting they operate independently. The evidence does not support a complex architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0150",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Both agents, calculator and writer, have distinct responsibilities but the evidence only shows a composition interaction, implying a sequential execution where one agent's output is used by the other. There is no clear evidence of concurrent or parallel execution."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0151",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities (web search and financial data handling), but there is no evidence of concurrent or parallel execution. The composition interaction primitive suggests an ordered execution, aligning with a sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0152",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities: 'Web Search Agent' handles web search requests, while 'Finance Agent' handles financial data requests. There is no evidence of concurrent or distributed execution, suggesting a sequential order of operations."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0153",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities (web_agent, hackernews_agent, writer_agent), but the evidence suggests a sequential execution pattern through composition, indicating some ordered dependency."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0154",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The web_agent and finance_agent have clearly defined, non-overlapping responsibilities. The evidence of composition suggests an ordered execution where one agent's output might be used by the other, indicating a sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0155",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear responsibilities for the Analyst and Researcher roles, but the third agent has no defined responsibilities. The interaction evidence is limited to a composition relationship, suggesting an ordered or dependent execution, which aligns with a sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0156",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "unresolved",
+      "architecture_primary": "single_agent",
+      "confidence": "medium",
+      "rationale": "The evidence indicates that the agents are part of a team through composition, but there are no clear responsibilities assigned to each agent, and the interaction evidence is limited to team membership only, which does not provide enough information to determine specialization or architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0157",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "unresolved",
+      "architecture_primary": "single_agent",
+      "confidence": "medium",
+      "rationale": "The evidence indicates that there are two agents, `researcher` and `writer`, but their responsibilities are not specified. The interaction evidence is limited to team membership only, suggesting a single-agent structure where these roles might be part of a broader team or workflow, but the specific interactions and responsibilities are not detailed enough to determine specialization or architecture with high confidence."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0158",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Researcher' and 'Writer' have clearly differentiated responsibilities with no evidence of concurrent or parallel execution. The 'composition' interaction primitive indicates an ordered sequence where the Researcher's task is completed before the Writer's task."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0159",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for Editor, Writer, and Fact Checker. The interaction evidence is limited to team membership only, indicating a sequential workflow where one agent completes their task before the next begins."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0160",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Each agent has a distinct responsibility: Continuity Editor checks script- footage consistency, Video Analyst analyzes video clips, and Script Reader extracts relevant script information. The evidence of interaction is limited to team membership only, suggesting a sequential workflow where one agent's output is used by another, but no explicit interaction edges are present."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0161",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly differentiated responsibilities, with each focusing on a distinct aspect of the game concept pitch. The evidence indicates a sequential flow, as the market analyst evaluates the market viability, followed by the creative director assessing the creative vision, and the pitch writer crafting the structured pitch. The art agent, while present, does not have explicit responsibilities, suggesting a more supportive role."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0162",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'Web Researcher' and 'Deep Researcher' have distinct responsibilities, but their interaction is inferred solely from team membership, suggesting a sequential execution where one agent completes its task before the next begins."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0163",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities (finance_agent for displaying data using tables and web_search_agent for including sources), but there is no evidence of concurrent or parallel execution. The composition interaction primitive suggests an ordered execution, aligning with a sequential architecture."
+    }
+  },
+  {
+    "system_id": "agno-agi/agno::system::0164",
+    "repository": "agno-agi/agno",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'news_agent' and 'market_data_agent' have clearly defined, distinct responsibilities focused on different tasks (researching company news and fetching/analyzing market data). The evidence of composition (team membership) suggests an ordered execution, indicating a sequential architecture."
+    }
+  },
+  {
+    "system_id": "aimclub/CoScientist::system::0001",
+    "repository": "aimclub/CoScientist",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "conditional_routing",
+      "confidence": "medium",
+      "rationale": "There is only one responsibility field provided, and it is not clearly differentiated between the two agents. The primary evidence for architecture is conditional routing, but the lack of explicit interaction edges or clear responsibility differentiation suggests low specialization."
+    }
+  },
+  {
+    "system_id": "AmeNetwork/aser::system::0001",
+    "repository": "AmeNetwork/aser",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities related to searching for cryptocurrency prices and writing an article. However, there is a supervisor agent that oversees the other agents, indicating some level of hierarchical structure. The evidence supports a clear division of responsibilities but does not fully eliminate the possibility of overlapping or shared tasks."
+    }
+  },
+  {
+    "system_id": "AmeNetwork/aser::system::0002",
+    "repository": "AmeNetwork/aser",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "parallel",
+      "confidence": "high",
+      "rationale": "The evidence shows three agents with distinct responsibilities: write_agent, search_btc_agent, and supervisor_agent. However, the interaction evidence is limited to a single 'composition' primitive, which does not strongly indicate a specific architecture. Given the file name 'parallel_multi_agent.py', it is reasonable to infer a parallel architecture, but the evidence is not strong enough to be considered high confidence."
+    }
+  },
+  {
+    "system_id": "AmeNetwork/aser::system::0003",
+    "repository": "AmeNetwork/aser",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities (write article, search bitcoin price, supervisor), but the evidence suggests a sequential execution model through the use of composition, indicating that one agent's task must be completed before the next can begin."
+    }
+  },
+  {
+    "system_id": "AmeNetwork/aser::system::0004",
+    "repository": "AmeNetwork/aser",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The system has three agents with distinct responsibilities: write_agent, search_btc_agent, and supervisor_agent. The primary interaction evidence is conditional routing, indicating that the agents' execution is not strictly sequential or parallel but rather based on conditions."
+    }
+  },
+  {
+    "system_id": "AmeNetwork/aser::system::0005",
+    "repository": "AmeNetwork/aser",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities (write article, search bitcoin price, supervisor), but the evidence suggests a sequential execution pattern through the use of composition, indicating that one agent's task must be completed before the next can begin."
+    }
+  },
+  {
+    "system_id": "benitomartin/crewai-rag-langchain-qdrant::system::0001",
+    "repository": "benitomartin/crewai-rag-langchain-qdrant",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The reasarcher and writer agents have clearly defined and complementary responsibilities. The reasarcher's goal is to extract insights from a research paper, while the writer's goal is to craft a summary based on those insights. The composition interaction evidence indicates a sequential dependency, where the writer's task is dependent on the reasarcher's output."
+    }
+  },
+  {
+    "system_id": "bhancockio/crewai-updated-tutorial-hierarchical::system::0001",
+    "repository": "bhancockio/crewai-updated-tutorial-hierarchical",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities, with no overlap mentioned. The evidence indicates a hierarchical structure through the use of delegation, where the editor oversees the news_fetcher_agent, news_analyzer_agent, and newsletter_compiler_agent."
+    }
+  },
+  {
+    "system_id": "chirindaopensource/multi_agent_system_architecture_for_federal_funds_target_rate_prediction::system::0001",
+    "repository": "chirindaopensource/multi_agent_system_architecture_for_federal_funds_target_rate_prediction",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent: analyst, economist, drafter, and member. The interaction evidence is primarily sequential, indicating a structured, ordered process."
+    }
+  },
+  {
+    "system_id": "davidmonterocrespo24/DaveLovable::system::0001",
+    "repository": "davidmonterocrespo24/DaveLovable",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The evidence shows clear differentiation in responsibilities between the Coder and Planner agents, and the use of conditional routing through the orchestrator, indicating a high level of specialization and a conditional routing architecture."
+    }
+  },
+  {
+    "system_id": "DemonDamon/AgenticX::system::0001",
+    "repository": "DemonDamon/AgenticX",
+    "classification": {
+      "specialization": "unresolved",
+      "architecture_primary": "sequential",
+      "confidence": "medium",
+      "rationale": "The evidence shows that the agents are executed in a sequential manner, but there are no clear responsibilities defined for each agent, making it difficult to determine the level of specialization."
+    }
+  },
+  {
+    "system_id": "echo-yiyiyi/cube::system::0001",
+    "repository": "echo-yiyiyi/cube",
+    "classification": {
+      "specialization": "unresolved",
+      "architecture_primary": "sequential",
+      "confidence": "medium",
+      "rationale": "The evidence shows that the agents are connected through sequential interactions, but there is no clear indication of distinct responsibilities for each agent. The responsibilities of the agents are not specified, and they appear to be generated in a sequential manner, which does not provide enough information to determine the level of specialization."
+    }
+  },
+  {
+    "system_id": "FoundationAgents/MetaGPT::system::0001",
+    "repository": "FoundationAgents/MetaGPT",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents SimpleCoder, SimpleTester, and SimpleReviewer have clearly defined, distinct responsibilities. The evidence shows a sequential execution pattern where SimpleCoder is hired first, followed by SimpleTester, and then SimpleReviewer. This indicates a high level of specialization among the agents."
+    }
+  },
+  {
+    "system_id": "FoundationAgents/MetaGPT::system::0002",
+    "repository": "FoundationAgents/MetaGPT",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Biden and Trump have distinct profiles, indicating some specialization. However, the primary interaction pattern is sequential, with Biden explicitly hiring Trump, suggesting meaningful overlap in their responsibilities."
+    }
+  },
+  {
+    "system_id": "genieincodebottle/aiml-companion::system::0001",
+    "repository": "genieincodebottle/aiml-companion",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities: pattern_analyst focuses on identifying fraud patterns, social_validator assesses claim consistency, and anomaly_detector identifies statistical anomalies. The evidence also indicates a sequential architecture through the use of crewai_process_sequential and orchestrator_membership interaction primitives."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0001",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The root_agent clearly delegates tasks to the youtube_search_agent and bigquery_agent, indicating a hierarchical structure where responsibilities are well-defined and specialized. The root_agent acts as a supervisor, delegating specific tasks to the other agents, which have distinct responsibilities."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0002",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The root_agent clearly delegates tasks to the roll_agent and prime_agent, indicating high specialization. The interaction evidence supports a hierarchical architecture with explicit delegation."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0003",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The evidence shows clear hierarchical delegation where the 'reimbursement_agent' delegates tasks to the 'approval_agent' based on the amount of the reimbursement. This indicates high specialization among the agents."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0004",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The agents have clearly differentiated responsibilities, with the root agent delegating tasks to the analysis pipeline. The evidence shows a hierarchical structure with clear delegation and coordination."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0005",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The root_agent has a clear responsibility to delegate tasks to the weather_agent, indicating high specialization. The interaction evidence shows a hierarchical structure with explicit delegation."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0006",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Both agents have distinct instructions but operate in a sequential order, indicating overlapping responsibilities with no clear differentiation."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0007",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows that each agent has a clearly defined and distinct responsibility (rolling dice and checking for prime numbers), and the interaction evidence indicates a sequential execution order, with no interaction edges present."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0008",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities: CodeReviewerAgent, CodeWriterAgent, and CodeRefactorerAgent. The interaction evidence indicates a sequential execution order, where the output of one agent serves as the input for the next."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0009",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The root_agent clearly delegates tasks to the roll_agent and prime_agent, indicating high specialization. The hierarchical structure is explicitly defined through delegation."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0010",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Each agent has a distinct responsibility: `goals_agent` handles delivering call goals, `greeter_agent` greets and confirms the caller's identity, and `dob_verifier_agent` verifies the caller's date of birth. The interaction evidence clearly shows a sequential flow, with each agent's task completing before the next one begins."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0011",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The root agent delegates tasks to managed_search_agent and managed_code_execution_agent, indicating clear specialization and a hierarchical structure."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0012",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Two agents, 'hello_agent' and 'summarize_agent', have clearly defined, non-overlapping responsibilities. The interaction evidence indicates a sequential execution order, further supporting high specialization."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0013",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The root_agent clearly delegates tasks to roll_agent and prime_agent, indicating high specialization. The interaction evidence supports a hierarchical architecture with explicit delegation."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0014",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The evidence shows clear hierarchical delegation where the root_agent delegates tasks to the phone_recommender. The responsibilities of each agent are distinct and complementary, with the root_agent handling the overall interaction and the phone_recommender providing the specific recommendation."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0015",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The evidence shows clear hierarchical delegation where the root_agent delegates tasks to info_agent and close_agent. Each agent has distinct responsibilities, and there is no overlap in their tasks."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0016",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The evidence shows clear hierarchical delegation from the root_agent to the order_collector and payment_collector agents. Each agent has a distinct and specialized responsibility, with no overlap in their instructions or descriptions."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0017",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and complementary responsibilities, with the root_agent delegating tasks to the writer_agent, and the writer_agent delegating tasks to the translator_agent. This hierarchical structure ensures that each agent focuses on a specific task, leading to high specialization."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0018",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows two agents, `order_confirmation_agent` and `order_intake_agent`, each with distinct responsibilities. However, there is only sequential interaction evidence, indicating that the agents' tasks are executed in a specific order, which suggests some overlap in the workflow but clear differentiation in responsibilities."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0019",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "parallel",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent: code_agent, math_agent, and execution_summary_agent. The interaction evidence indicates a parallel architecture with no explicit interaction edges, suggesting these agents operate independently."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0020",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The evidence shows clear hierarchical delegation where the root_agent delegates tasks to the knowledge_agent. Each agent has distinct responsibilities, with the knowledge_agent gathering information and the root_agent managing the overall process."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0021",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Both agents, intake_agent and generate_instruction, have distinct responsibilities but the evidence suggests a sequential flow where one agent's task is completed before the next begins. There is no evidence of parallel or peer-to-peer interaction, indicating that the agents' responsibilities, while distinct, are executed in a linear sequence."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0022",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'generate_headline' and 'evaluate_headline' have clearly differentiated responsibilities. 'generate_headline' is responsible for creating a headline, while 'evaluate_headline' is responsible for grading its relevance. The interaction evidence shows a sequential execution pattern, where the 'generate_headline' agent is followed by the 'evaluate_headline' agent."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0023",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows that the two agents, `generate_headline` and `evaluate_headline`, have distinct responsibilities but their interactions are strictly sequential. `generate_headline` is responsible for writing a headline, while `evaluate_headline` is responsible for grading the headline's relevance. The sequential interaction pattern between these agents indicates some specialization, but the overlap in the workflow structure suggests that the differentiation is not highly specialized."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0024",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'find_name', 'generate_bio', and 'find_historical_event' have distinct responsibilities, and the interaction evidence shows a clear sequential execution pattern."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0025",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'find_related_topics' and 'explain_topic' have distinct responsibilities, but the workflow is primarily sequential, with each agent's task following the previous one."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0026",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have overlapping responsibilities, as they all process input in some form. The 'classify_input', 'answer_question', and 'comment_on_statement' agents share a common sequential workflow, indicating that their responsibilities are not clearly differentiated."
+    }
+  },
+  {
+    "system_id": "google/adk-python::system::0027",
+    "repository": "google/adk-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent and a sequential execution pattern, indicating high specialization and adherence to a sequential architecture."
+    }
+  },
+  {
+    "system_id": "handsomestWei/customer-service-ai-agent::system::0001",
+    "repository": "handsomestWei/customer-service-ai-agent",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows that the agents (product_agent, tech_agent, billing_agent, complaint_agent, general_agent) are sequentially routing their outputs to a final_response agent. While there is some specialization in the responsibilities of the agents, the overall architecture is sequential, indicating that the agents' responsibilities are not fully differentiated."
+    }
+  },
+  {
+    "system_id": "iuyup/AgentFlow::system::0001",
+    "repository": "iuyup/AgentFlow",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows a clear sequential flow with the 'fetch' agent sequentially interacting with the 'synthesize' agent, and both agents being part of a conditional routing mechanism. However, the responsibilities of the 'RAGAgentPattern' agent are not clearly defined, indicating some overlap and lack of strong specialization."
+    }
+  },
+  {
+    "system_id": "kanitvural/aws-data-science-data-engineering-mlops-infra::system::0001",
+    "repository": "kanitvural/aws-data-science-data-engineering-mlops-infra",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent, and the primary interaction mechanism is conditional routing, where the Supervisor Agent routes requests to the appropriate agent based on the user's query."
+    }
+  },
+  {
+    "system_id": "ki11e6/langgraph-multi-agent::system::0001",
+    "repository": "ki11e6/langgraph-multi-agent",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "Agents have clearly defined, complementary responsibilities: supervisor decides next actions, researcher gathers sources, writer produces drafts, and reviewer critiques. The conditional routing interactions between agents indicate a clear, structured workflow."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0001",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "All agents have no defined responsibilities, and the interaction evidence is based on sequential task dependencies, indicating that the agents' roles are not clearly differentiated."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0002",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Each agent has a distinct role and goal, with clear responsibilities that do not overlap. The evidence indicates a sequential execution pattern, where tasks are dependent on each other."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0003",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The Project Manager and Research Specialist have clearly defined, complementary responsibilities. The evidence indicates a sequential task dependency, suggesting an ordered execution where one agent's task completion is a prerequisite for the next."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0004",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows that each agent has a distinct and clear responsibility, with no overlap. The interaction evidence is explicitly sequential, indicating a clear order of execution."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0005",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows that the agents 'Researcher' and 'Writer' have distinct roles and goals, but their interaction is explicitly sequential, indicating some overlap in their responsibilities."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0006",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly differentiated responsibilities, each with a specific role and goal. The evidence also shows sequential task dependencies, indicating a structured, sequential architecture."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0007",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities, with no overlap mentioned. The evidence indicates a sequential architecture through explicit task dependencies."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0008",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Each agent has a distinct role and goal, with clear instructions. The interaction evidence indicates a sequential execution order, where one agent's task depends on the completion of another's."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0009",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent (Product Manager, Software Architect, Senior Developer, QA Engineer). The interaction evidence is strongly sequential, indicating a clear order of execution."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0010",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly differentiated responsibilities, each focusing on a specific aspect of reasoning and problem-solving. The evidence indicates a sequential execution pattern, with no explicit parallel or distributed tasks."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0011",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization among the agents, each with distinct roles and goals. The interaction evidence is explicitly sequential, indicating a clear order of execution."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0012",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The AsyncSearchAgent and SummaryAgent have clearly defined, complementary responsibilities. The AsyncSearchAgent is responsible for performing fast parallel searches, while the SummaryAgent synthesizes information from multiple search results. The interaction evidence indicates a sequential dependency, where the SummaryAgent waits for the AsyncSearchAgent to complete its task before proceeding."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0013",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities: State analyzer, Action performer, and Feedback analyzer. The interaction evidence shows a sequential dependency, indicating a clear order of execution."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0014",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The generator and evaluator agents have clearly defined, complementary responsibilities. The generator is responsible for generating solutions, while the evaluator provides feedback for improvement. The interaction evidence indicates a sequential dependency, where the generator produces solutions and then the evaluator evaluates them."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0015",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct roles and goals for the 'Researcher' and 'Writer' agents. The interaction evidence is explicitly sequential, indicating ordered/dependent execution."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0016",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Both agents, Researcher and Writer, have distinct roles and goals, but their responsibilities do not show significant differentiation. The interaction evidence is strongly sequential, indicating that the agents' tasks are executed in a specific order without explicit parallelism or other architectural mechanisms."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0017",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The system clearly defines five distinct agents with specialized roles and goals. The interaction evidence indicates a sequential task dependency, where the Router distributes tasks to the Workers, and the Synthesizer combines their outputs. This structure shows high specialization and a clear sequential architecture."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0018",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "All agents (Processor 1, Processor 2, Processor 3) have the same role and goal of collecting time, indicating overlapping responsibilities. The aggregator's role is to collect results from these processors, but the processors themselves do not have distinct responsibilities. The architecture is sequential, with explicit task dependencies."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0019",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents 'DataCollector' and 'DataProcessor' have clearly defined and distinct responsibilities, with no overlap. The evidence also indicates a sequential execution pattern through 'sequential_task_dependency'."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0020",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities, with a strong emphasis on conditional routing for task delegation. Each agent handles specific types of support requests, and there is a clear hierarchy in handling issues, from the support agent to the FAQ agent and then to the escalation agent."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0021",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization among the agents, each with distinct responsibilities. The customer service agent acts as a central point of contact, routing requests to the appropriate specialist based on the nature of the inquiry. This indicates a high level of specialization and a conditional routing architecture."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0022",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization among agents, each with distinct roles and responsibilities. The coordinator agent handles task delegation through conditional routing, ensuring that tasks are handed off to the appropriate specialist based on the task type. This indicates a high level of specialization."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0023",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities related to research, formatting, and quality checking. The interaction evidence indicates a sequential execution pattern, where tasks are dependent on each other."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0024",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents, WebSearcher and Analyzer, have clearly defined and distinct responsibilities. WebSearcher is responsible for finding relevant results, while Analyzer is tasked with analyzing and summarizing these results. The evidence also indicates a sequential execution pattern, where the search task must be completed before the analysis can begin."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0025",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent. The interaction evidence is exclusively sequential, indicating a strict order of operations without concurrent execution."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0026",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "hierarchical",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined, complementary roles with distinct responsibilities: Manager, Researcher, DataAnalyst, and Writer. The interaction evidence shows a clear sequential dependency, indicating a hierarchical structure where tasks are delegated in a specific order."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0027",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent (Research Agent, Analysis Agent, and Report Writer). The interaction evidence is strongly sequential, indicating a clear dependency order in the workflow."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0028",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent, and the interaction evidence indicates a sequential execution pattern through task dependencies."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0029",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents, 'Data Analyst' and 'Content Writer', have clearly defined and distinct responsibilities. The interaction evidence indicates a sequential task dependency, where one task must be completed before the next can begin, suggesting a sequential architecture."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0030",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents, Market Researcher and Business Strategist, have clearly defined and distinct responsibilities. The interaction evidence shows a sequential dependency, indicating that the tasks are executed in a specific order."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0031",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for the Data Processor and Performance Monitor agents. The interaction evidence indicates a sequential task dependency, which aligns with the provided architecture pattern."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0032",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent: Research Specialist, Content Summarizer, and Process Optimizer. The interaction evidence is explicitly sequential, indicating ordered/dependent execution."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0033",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly differentiated responsibilities: WebScraper for extracting URLs, URLDataExtractor for crawling URLs, and BlogWriter for creating blog posts. The evidence also shows a sequential execution pattern through explicit task dependencies."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0034",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct roles and responsibilities for each agent: skill_analyst, experience_analyst, and cv_evaluator. The interaction evidence indicates a sequential task dependency, which aligns with the sequential architecture."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0035",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly differentiated responsibilities, each focusing on a distinct phase of the climate impact analysis process. The evidence also indicates a sequential execution pattern through the `sequential_task_dependency` interaction primitive."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0036",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows that each agent has a distinct responsibility, with clear goals and instructions. The interaction evidence indicates a sequential execution order, where one task depends on the completion of another."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0037",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent. The interaction evidence is explicitly sequential, indicating a clear order of execution."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0038",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly differentiated responsibilities, each focused on a specific aspect of disaster recovery. The evidence indicates a sequential execution pattern through the `sequential_task_dependency` interaction evidence."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0039",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined, distinct responsibilities, each focusing on a specific task within the workflow. The evidence indicates a sequential execution pattern, with tasks dependent on the completion of previous tasks."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0040",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities, with no overlap mentioned. The interaction evidence indicates a sequential execution pattern, where one agent's task completion is a prerequisite for the next agent's task."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0041",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly differentiated responsibilities, with each focused on a specific task (Transaction Analyzer, Pattern Checker, Identity Verifier, Alert Generator). The interaction evidence indicates a sequential dependency, where one agent's output is a prerequisite for the next agent's input."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0042",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Each agent has a distinct responsibility (Symptom Analyzer, Lab Processor, History Analyzer, Diagnosis Generator, Treatment Recommender) and the interaction evidence shows a clear sequential dependency, indicating that the agents operate in a step-by-step, ordered manner without concurrent execution."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0043",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Each agent has a distinct responsibility related to a specific aspect of the medical protocol generation process. The evidence indicates a clear sequential dependency between the agents, with no indication of parallel or concurrent execution."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0044",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities, with no overlap. The evidence indicates a strict sequential execution pattern through the use of sequential task dependencies."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0045",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly differentiated responsibilities, each with a specific role, goal, and instructions. The interaction evidence indicates a sequential execution pattern, where tasks are dependent on each other."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0046",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities, with no overlap. The evidence indicates a sequential execution pattern through explicit task dependencies."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0047",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly differentiated responsibilities, each focused on a distinct phase of the research process. The evidence also indicates a sequential execution pattern through the `sequential_task_dependency` interaction primitive."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0048",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities, with no overlap in their roles. The evidence indicates a sequential execution pattern, where each agent's task is dependent on the completion of the previous one."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0049",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities, with no overlap. The evidence indicates a sequential architecture through explicit task dependencies."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0050",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly differentiated responsibilities, each focusing on a specific aspect of mission planning and execution. The evidence indicates a sequential execution pattern through explicit task dependencies."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0051",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities: Event Monitoring, Impact Assessment, and Strategy Development. The interaction evidence indicates a sequential execution where one agent's task depends on the completion of another's, suggesting a low-level dependency structure."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0052",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is some overlap in their interactions. The triage agent routes to the billing agent for specific tasks, indicating a level of specialization. However, the evidence does not show clear differentiation in responsibilities beyond the routing mechanism."
+    }
+  },
+  {
+    "system_id": "MervinPraison/PraisonAI::system::0053",
+    "repository": "MervinPraison/PraisonAI",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Each agent has a distinct role and responsibility, with clear instructions for their tasks. The evidence shows that agents are composed together, suggesting a sequential execution where one agent's output is used as input for the next, but no explicit parallel or distributed architecture is present."
+    }
+  },
+  {
+    "system_id": "imanoop7/Financial-Analysis--Multi-Agent-Open-Source-LLM::system::0001",
+    "repository": "imanoop7/Financial-Analysis--Multi-Agent-Open-Source-LLM",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities, with no overlap mentioned. The evidence indicates a sequential architecture through the use of 'sequential' and 'composition' interaction primitives."
+    }
+  },
+  {
+    "system_id": "mesutdmn/Autonomous-Multi-Agent-Systems-with-CrewAI-Essay-Writer::system::0001",
+    "repository": "mesutdmn/Autonomous-Multi-Agent-Systems-with-CrewAI-Essay-Writer",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence clearly defines three distinct roles (Content Researcher, Content Writer, and Content Editor) with clear, non-overlapping responsibilities. The interaction evidence indicates a sequential execution pattern, where each agent's task is dependent on the previous one."
+    }
+  },
+  {
+    "system_id": "microsoft/autogen::system::0001",
+    "repository": "microsoft/autogen",
+    "classification": {
+      "specialization": "unresolved",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The evidence shows conditional routing through the `autogen_selector_group_chat` mechanism, but there is no clear indication of distinct responsibilities for the agents."
+    }
+  },
+  {
+    "system_id": "microsoft/autogen::system::0002",
+    "repository": "microsoft/autogen",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "iterative_feedback",
+      "confidence": "high",
+      "rationale": "The evidence shows that the agents operate in an iterative feedback loop through a round-robin group mechanism, indicating some distinct responsibilities but with overlapping execution."
+    }
+  },
+  {
+    "system_id": "microsoft/autogen::system::0003",
+    "repository": "microsoft/autogen",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "iterative_feedback",
+      "confidence": "high",
+      "rationale": "The agents 'other_assistant' and 'assistant' have distinct responsibilities, but there is evidence of iterative feedback through the round_robin_group interaction primitive, indicating some level of collaboration and overlap in their tasks."
+    }
+  },
+  {
+    "system_id": "microsoft/autogen::system::0004",
+    "repository": "microsoft/autogen",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities, with roles such as verifier, research assistant, summary agent, and critic agent. The evidence shows a strong use of conditional routing through the `autogen_selector_group_chat` and `orchestrator_membership` mechanisms, indicating a well-defined workflow and interaction pattern."
+    }
+  },
+  {
+    "system_id": "microsoft/autogen::system::0005",
+    "repository": "microsoft/autogen",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "iterative_feedback",
+      "confidence": "high",
+      "rationale": "Each agent has a distinct responsibility, and the evidence shows an iterative feedback loop through the round_robin_group interaction primitive."
+    }
+  },
+  {
+    "system_id": "microsoft/autogen::system::0006",
+    "repository": "microsoft/autogen",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "iterative_feedback",
+      "confidence": "high",
+      "rationale": "The agents 'assistant' and 'critic' have clearly differentiated responsibilities, with the 'assistant' providing general help and the 'critic' offering constructive feedback. The iterative feedback loop is explicitly defined through the 'round_robin_group' interaction primitive, indicating a well-defined and structured interaction pattern."
+    }
+  },
+  {
+    "system_id": "microsoft/autogen::system::0007",
+    "repository": "microsoft/autogen",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "iterative_feedback",
+      "confidence": "high",
+      "rationale": "The system clearly defines three distinct agents with specialized roles: 'assistant', 'critic', and 'user'. The iterative feedback loop is explicitly implemented through the 'round_robin_group' interaction primitive, indicating a well-defined and differentiated set of responsibilities among the agents."
+    }
+  },
+  {
+    "system_id": "microsoft/autogen::system::0008",
+    "repository": "microsoft/autogen",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "iterative_feedback",
+      "confidence": "high",
+      "rationale": "The agents 'assistant' and 'yoda' have distinct responsibilities, with 'assistant' providing general help and 'yoda' repeating messages in a specific tone. However, the 'user' agent does not have any defined responsibilities. The primary interaction pattern is iterative feedback through a round-robin group mechanism."
+    }
+  },
+  {
+    "system_id": "NirDiamant/GenAI_Agents::system::0002",
+    "repository": "NirDiamant/GenAI_Agents",
+    "classification": {
+      "specialization": "unresolved",
+      "architecture_primary": "conditional_routing",
+      "confidence": "medium",
+      "rationale": "The evidence shows conditional routing but lacks clear differentiation in responsibilities among the agents. The agents are involved in sequential and conditional routing interactions, but their specific roles and responsibilities are not clearly defined."
+    }
+  },
+  {
+    "system_id": "NirDiamant/GenAI_Agents::system::0003",
+    "repository": "NirDiamant/GenAI_Agents",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear sequential execution through explicit ordered/dependent execution edges, and the responsibilities of the agents are distinct with no overlapping responsibilities mentioned."
+    }
+  },
+  {
+    "system_id": "NirDiamant/GenAI_Agents::system::0004",
+    "repository": "NirDiamant/GenAI_Agents",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Agents have clearly differentiated responsibilities, with each handling specific types of queries (technical, billing, general) and a categorization agent. The interaction evidence shows a sequential flow, where the categorization agent processes the query and then routes it to the appropriate handler agent."
+    }
+  },
+  {
+    "system_id": "NirDiamant/GenAI_Agents::system::0005",
+    "repository": "NirDiamant/GenAI_Agents",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows a clear sequential flow of tasks, with each agent's responsibility limited to a specific step in the process. However, there is some overlap in the responsibilities of the agents, as they are not clearly differentiated beyond their specific task in the sequence."
+    }
+  },
+  {
+    "system_id": "NirDiamant/GenAI_Agents::system::0006",
+    "repository": "NirDiamant/GenAI_Agents",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Each agent has a distinct responsibility that does not overlap significantly. The evidence shows a clear sequential dependency between the agents, with no explicit parallel or peer-to-peer interactions."
+    }
+  },
+  {
+    "system_id": "NirDiamant/GenAI_Agents::system::0007",
+    "repository": "NirDiamant/GenAI_Agents",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Agents have clearly defined and distinct responsibilities with no overlap. The interaction evidence shows a sequential execution pattern, where one agent's task must be completed before the next can begin."
+    }
+  },
+  {
+    "system_id": "NirDiamant/GenAI_Agents::system::0008",
+    "repository": "NirDiamant/GenAI_Agents",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The evidence shows that the 'generate' and 'review' agents have distinct responsibilities, with a clear sequential flow and conditional routing. However, there is some overlap in the workflow, as the 'review' agent's conditional routing suggests it may handle multiple paths, indicating some overlap in responsibilities."
+    }
+  },
+  {
+    "system_id": "NirDiamant/GenAI_Agents::system::0009",
+    "repository": "NirDiamant/GenAI_Agents",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined, sequential responsibilities, with each agent performing a specific task in the writing process. There is no evidence of parallel or concurrent execution, and the tasks are ordered and dependent on each other, indicating a high level of specialization."
+    }
+  },
+  {
+    "system_id": "openai/openai-agents-python::system::0001",
+    "repository": "openai/openai-agents-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The agents have clearly differentiated responsibilities, with each handling a specific language. The triage agent uses conditional routing to hand off requests to the appropriate language-specific agent, indicating a high level of specialization."
+    }
+  },
+  {
+    "system_id": "openai/openai-agents-python::system::0002",
+    "repository": "openai/openai-agents-python",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, with the 'Start Agent' generating a random number and deciding the next step based on the number's parity, and the 'Multiply Agent' handling the multiplication task. However, there is some overlap in their responsibilities as both agents are involved in the number processing workflow, indicating a medium level of specialization."
+    }
+  },
+  {
+    "system_id": "openai/openai-agents-python::system::0003",
+    "repository": "openai/openai-agents-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and complementary responsibilities. The 'Start Agent' generates a random number and conditionally routes it to the 'Multiply Agent', indicating a high level of specialization."
+    }
+  },
+  {
+    "system_id": "openai/openai-agents-python::system::0004",
+    "repository": "openai/openai-agents-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The agents have clearly differentiated responsibilities, with the second_agent handling English instructions and the Spanish assistant handling Spanish instructions. The conditional routing is explicitly defined, indicating a well-defined handoff mechanism."
+    }
+  },
+  {
+    "system_id": "openai/openai-agents-python::system::0005",
+    "repository": "openai/openai-agents-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The agents have clearly differentiated responsibilities, with the second_agent handling general English instructions and the spanish_agent handling Spanish instructions. The conditional routing is explicitly defined, ensuring that the system can route messages based on the language spoken by the user."
+    }
+  },
+  {
+    "system_id": "openai/openai-agents-python::system::0006",
+    "repository": "openai/openai-agents-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent (Triage Agent, FAQ Agent, Seat Booking Agent). There are also explicit conditional routing interactions between the Triage Agent and other agents, indicating a well-defined workflow."
+    }
+  },
+  {
+    "system_id": "openai/openai-agents-python::system::0007",
+    "repository": "openai/openai-agents-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities, with the triage agent handling initial calls, the FAQ agent managing questions, and the records agent handling updates. The evidence shows conditional routing between the triage agent and other agents, indicating a high level of specialization."
+    }
+  },
+  {
+    "system_id": "openai/openai-agents-python::system::0008",
+    "repository": "openai/openai-agents-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities, with a strong emphasis on conditional routing between them. The intake_agent handles initial requests, the sandbox_reviewer inspects onboarding documents, and the account_manager writes internal updates. The conditional routing between these agents ensures a clear and specialized workflow."
+    }
+  },
+  {
+    "system_id": "openai/openai-agents-python::system::0009",
+    "repository": "openai/openai-agents-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The agents 'Assistant' and 'Spanish' have clearly defined and distinct responsibilities, with the 'Assistant' handling English-speaking users and the 'Spanish' agent handling Spanish-speaking users through a conditional routing mechanism. This indicates high specialization."
+    }
+  },
+  {
+    "system_id": "openai/openai-agents-python::system::0010",
+    "repository": "openai/openai-agents-python",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The agents 'Assistant' and 'Spanish' have clearly defined and distinct responsibilities, with the 'Assistant' handling general instructions and the 'Spanish' agent handling Spanish-specific instructions. The conditional routing evidence shows that the 'Assistant' can hand off to the 'Spanish' agent based on the user's language, indicating a clear specialization."
+    }
+  },
+  {
+    "system_id": "pettingllms-ai/PettingLLMs::system::0001",
+    "repository": "pettingllms-ai/PettingLLMs",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent: coder, executor, and reviewer. The interaction evidence is strictly sequential, indicating a clear order of operations without concurrent execution."
+    }
+  },
+  {
+    "system_id": "pettingllms-ai/PettingLLMs::system::0002",
+    "repository": "pettingllms-ai/PettingLLMs",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities: solver generates solutions, verifier checks them, and end_agent confirms approval. The interaction evidence shows a sequential flow, with solver producing output for verifier, verifier reviewing and sending feedback to solver, and end_agent acknowledging the approved solution."
+    }
+  },
+  {
+    "system_id": "pettingllms-ai/PettingLLMs::system::0003",
+    "repository": "pettingllms-ai/PettingLLMs",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for the 'planner' and 'summarizer' agents. The 'planner' is responsible for deciding which sites to search and what information to extract, while the 'summarizer' synthesizes a concise answer from the browsing transcript. The interaction is strictly sequential, with the 'planner' directing the 'web_surfer' and the 'summarizer' receiving input from the 'web_surfer'."
+    }
+  },
+  {
+    "system_id": "QSong-github/DrugClaw::system::0001",
+    "repository": "QSong-github/DrugClaw",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents are sequentially linked through explicit edges, indicating a clear order of execution. However, the responsibilities of the agents are not explicitly defined, suggesting some overlap or shared tasks."
+    }
+  },
+  {
+    "system_id": "raga-ai-hub/RagaAI-Catalyst::system::0001",
+    "repository": "raga-ai-hub/RagaAI-Catalyst",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence clearly defines three distinct agents with clear, non-overlapping responsibilities: brainstormer, outliner, and writer. The interaction evidence is strongly sequential, indicating a clear order of operations."
+    }
+  },
+  {
+    "system_id": "seehiong/autonomous-hdb-deepagents::system::0001",
+    "repository": "seehiong/autonomous-hdb-deepagents",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but the evidence suggests a sequential execution order. The 'resale-mrt-subagent' handles data retrieval and enrichment, 'summary-writer' processes the enriched data, and 'orchestrator' manages the workflow by sequentially calling these agents. While the agents have different roles, their interactions are strictly ordered, indicating a medium level of specialization."
+    }
+  },
+  {
+    "system_id": "shamspias/langgraph-agent-system::system::0001",
+    "repository": "shamspias/langgraph-agent-system",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent (analyze, respond, recommend) and a sequential execution pattern through explicit interaction edges."
+    }
+  },
+  {
+    "system_id": "shamspias/langgraph-agent-system::system::0002",
+    "repository": "shamspias/langgraph-agent-system",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but the interaction is primarily sequential, with no evidence of parallel or peer-to-peer communication. The conditional routing is used for decision-making but does not change the overall sequential flow."
+    }
+  },
+  {
+    "system_id": "shuxiachai/academic-commercialization-agent::system::0001",
+    "repository": "shuxiachai/academic-commercialization-agent",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The system contains two agents, but their responsibilities are not fully overlapping. The 'Academic Commercialization Generalist' agent has a clear goal and responsibilities, while the 'AcademicAgent' agent has no explicit responsibilities listed. The interaction evidence strongly suggests a sequential architecture, with multiple sequential interactions present."
+    }
+  },
+  {
+    "system_id": "shuxiachai/academic-commercialization-agent::system::0002",
+    "repository": "shuxiachai/academic-commercialization-agent",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "All agents have no defined responsibilities, and the interaction evidence is based on sequential execution, indicating weak differentiation among agents."
+    }
+  },
+  {
+    "system_id": "sinanuozdemir/oreilly-ai-agents::system::0001",
+    "repository": "sinanuozdemir/oreilly-ai-agents",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "iterative_feedback",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities, with no overlap. The planner coordinates tasks among the financial analyst, news analyst, and writer, while the weather_agent is not involved in the primary workflow. The iterative_feedback interaction primitive indicates a structured, repeated process among the agents."
+    }
+  },
+  {
+    "system_id": "sinanuozdemir/oreilly-ai-agents::system::0002",
+    "repository": "sinanuozdemir/oreilly-ai-agents",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents have clearly defined and distinct responsibilities: Trend Analyst, Math Assistant, Senior Research Analyst, and Content Writer. The interaction evidence primarily shows sequential dependencies, indicating a clear specialization among the agents."
+    }
+  },
+  {
+    "system_id": "sinanuozdemir/oreilly-ai-agents::system::0003",
+    "repository": "sinanuozdemir/oreilly-ai-agents",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The agents have distinct responsibilities, but there is some overlap in the conditional routing mechanism. The triage agent, billing agent, and refund agent handle different types of tasks, but the primary interaction pattern is through conditional routing, indicating some overlap in responsibilities."
+    }
+  },
+  {
+    "system_id": "souvikmajumder26/Multi-Agent-Medical-Assistant::system::0001",
+    "repository": "souvikmajumder26/Multi-Agent-Medical-Assistant",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows that the agents are primarily executed in a sequential manner, with clear dependencies. However, there are also conditional routing mechanisms present, indicating some level of flexibility in the workflow. The responsibilities of the agents are not clearly differentiated, as the `image_analyzer` and `web_search_processor` agents do not have explicit responsibilities listed."
+    }
+  },
+  {
+    "system_id": "Starlight143/crucible::system::0001",
+    "repository": "Starlight143/crucible",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Each agent (formatter) has a distinct role and goal, with clear responsibilities that do not overlap. The evidence indicates a sequential execution pattern, where each formatter processes content in a linear, ordered manner."
+    }
+  },
+  {
+    "system_id": "Starlight143/crucible::system::0003",
+    "repository": "Starlight143/crucible",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct roles and responsibilities for each agent. The interaction evidence primarily indicates sequential execution, with no explicit parallel or peer-to-peer interactions."
+    }
+  },
+  {
+    "system_id": "Starlight143/crucible::system::0004",
+    "repository": "Starlight143/crucible",
+    "classification": {
+      "specialization": "low",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Both agents have the same responsibilities and the interaction evidence is consistently sequential, indicating weak differentiation in responsibilities."
+    }
+  },
+  {
+    "system_id": "Starlight143/crucible::system::0005",
+    "repository": "Starlight143/crucible",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "Each agent (reviewer, fixer, and analyzer) has distinct responsibilities that are clearly defined and do not overlap. The interaction evidence and architecture patterns also support a sequential execution model."
+    }
+  },
+  {
+    "system_id": "study8677/repobrain::system::0001",
+    "repository": "study8677/repobrain",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization among agents, each with distinct responsibilities. There are multiple agents with unique instructions, and the interaction evidence indicates conditional routing between agents, suggesting a well-defined and specialized role for each agent."
+    }
+  },
+  {
+    "system_id": "Varn1t/EDAgent::system::0001",
+    "repository": "Varn1t/EDAgent",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows a clear sequential execution pattern where each agent's responsibility is to process data and pass it to the next agent in a linear fashion. There is no evidence of parallel or concurrent execution, nor any indication of overlapping responsibilities among the agents."
+    }
+  },
+  {
+    "system_id": "victordibia/designing-multiagent-systems::system::0001",
+    "repository": "victordibia/designing-multiagent-systems",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent: verifier, summary_agent, and research_assistant. The interaction evidence includes conditional_routing, indicating a structured decision-making process for task assignment and coordination."
+    }
+  },
+  {
+    "system_id": "victordibia/designing-multiagent-systems::system::0002",
+    "repository": "victordibia/designing-multiagent-systems",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The assistant_agent has a specific responsibility to verify and summarize information, while the user_proxy is only involved when the assistant_agent is unable to verify. This indicates some specialization, but there is still a dependency on the user_proxy, suggesting some overlap. The primary architecture is conditional routing due to the use of an autogen_selector_group_chat mechanism."
+    }
+  },
+  {
+    "system_id": "victordibia/designing-multiagent-systems::system::0003",
+    "repository": "victordibia/designing-multiagent-systems",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent, and the primary interaction mechanism is conditional routing, as evidenced by the presence of autogen_selector_group_chat and orchestrator_membership."
+    }
+  },
+  {
+    "system_id": "victordibia/designing-multiagent-systems::system::0004",
+    "repository": "victordibia/designing-multiagent-systems",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "Each agent has a distinct responsibility, and the evidence shows conditional routing through the `autogen_selector_group_chat` and `orchestrator_membership` mechanisms."
+    }
+  },
+  {
+    "system_id": "victordibia/designing-multiagent-systems::system::0005",
+    "repository": "victordibia/designing-multiagent-systems",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent: verifier, summary_agent, and research_assistant. The conditional_routing interaction evidence indicates that the agents' execution is not strictly sequential or parallel but rather based on conditions, making the architecture primary label 'conditional_routing'."
+    }
+  },
+  {
+    "system_id": "victordibia/designing-multiagent-systems::system::0006",
+    "repository": "victordibia/designing-multiagent-systems",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The critic and poet agents have clearly defined and distinct responsibilities. The critic is responsible for reviewing and providing feedback on haikus, while the poet is responsible for writing and revising haikus. The sequential execution of these agents is explicitly defined by the orchestrator_membership evidence."
+    }
+  },
+  {
+    "system_id": "victordibia/designing-multiagent-systems::system::0007",
+    "repository": "victordibia/designing-multiagent-systems",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "parallel",
+      "confidence": "high",
+      "rationale": "The evidence shows that each agent (technical_researcher, social_researcher, market_researcher) has distinct responsibilities focused on different aspects of the topic. The interaction evidence indicates a parallel execution model, where these agents operate independently without explicit interaction edges."
+    }
+  },
+  {
+    "system_id": "victordibia/designing-multiagent-systems::system::0008",
+    "repository": "victordibia/designing-multiagent-systems",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence clearly defines three distinct agents with specialized responsibilities: editor, researcher, and writer. Each agent has a unique role in the workflow, and the interaction evidence indicates a sequential execution order."
+    }
+  },
+  {
+    "system_id": "victordibia/designing-multiagent-systems::system::0009",
+    "repository": "victordibia/designing-multiagent-systems",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "conditional_routing",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for the 'critic' and 'poet' agents. The interaction evidence includes conditional routing and iterative feedback, indicating a well-defined, specialized role for each agent."
+    }
+  },
+  {
+    "system_id": "victordibia/designing-multiagent-systems::system::0010",
+    "repository": "victordibia/designing-multiagent-systems",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent (analyst, finisher, researcher, supervisor). The interaction evidence indicates a sequential flow, where the supervisor delegates tasks to other agents in a specific order."
+    }
+  },
+  {
+    "system_id": "victordibia/designing-multiagent-systems::system::0011",
+    "repository": "victordibia/designing-multiagent-systems",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent (editor, researcher, writer) and explicit sequential interaction edges, indicating a high level of specialization and a sequential architecture."
+    }
+  },
+  {
+    "system_id": "victordibia/designing-multiagent-systems::system::0012",
+    "repository": "victordibia/designing-multiagent-systems",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows a clear sequential flow of tasks, with each agent having distinct responsibilities and a well-defined workflow. The 'picoagent' and 'web_summarizer' agents have distinct descriptions and instructions, and the interaction evidence indicates a strict sequential order of operations."
+    }
+  },
+  {
+    "system_id": "WenyuChiou/awesome-agentic-ai-zh::system::0001",
+    "repository": "WenyuChiou/awesome-agentic-ai-zh",
+    "classification": {
+      "specialization": "high",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The evidence shows clear specialization with distinct responsibilities for each agent: the writer, researcher, and critic. The interaction evidence is primarily sequential, indicating a clear order of operations."
+    }
+  },
+  {
+    "system_id": "wjayesh/mahilo::system::0001",
+    "repository": "wjayesh/mahilo",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The system defines four distinct agents with clear, though overlapping, responsibilities. However, the interaction evidence primarily shows a sequential pattern where the 'tools' agent interacts with the 'chatbot' agent. There is no strong evidence of parallel or hierarchical interactions, suggesting a medium level of specialization."
+    }
+  },
+  {
+    "system_id": "xeronsh/openOii::system::0001",
+    "repository": "xeronsh/openOii",
+    "classification": {
+      "specialization": "unresolved",
+      "architecture_primary": "conditional_routing",
+      "confidence": "medium",
+      "rationale": "The evidence shows conditional routing through human-in-the-loop decisions, but there is insufficient information about the responsibilities of individual agents to determine specialization level."
+    }
+  },
+  {
+    "system_id": "xeronsh/openOii::system::0002",
+    "repository": "xeronsh/openOii",
+    "classification": {
+      "specialization": "unresolved",
+      "architecture_primary": "conditional_routing",
+      "confidence": "medium",
+      "rationale": "There is conditional routing evidence but no clear differentiation in responsibilities between the agents."
+    }
+  },
+  {
+    "system_id": "XortexAI/XMem::system::0001",
+    "repository": "XortexAI/XMem",
+    "classification": {
+      "specialization": "medium",
+      "architecture_primary": "sequential",
+      "confidence": "high",
+      "rationale": "The agents are named with distinct responsibilities such as classifier, profiler, temporal, summarizer, image_agent, code_agent, snippet_agent, and judge. However, the evidence shows a sequential execution pattern where each agent's output is passed to the next in a linear fashion, without any explicit parallel or peer-to-peer interaction. This suggests some specialization but with significant overlap in the form of sequential dependency."
+    }
+  },
+  {
+    "system_id": "ZHangZHengEric/Sage::system::0001",
+    "repository": "ZHangZHengEric/Sage",
+    "classification": {
+      "specialization": "unresolved",
+      "architecture_primary": "conditional_routing",
+      "confidence": "medium",
+      "rationale": "There is conditional routing evidence, but the responsibilities of the agents are not clearly defined, making specialization unclear."
+    }
+  },
+  {
+    "system_id": "NirDiamant/GenAI_Agents::system::0001",
+    "repository": "NirDiamant/GenAI_Agents",
+    "classification": {
+      "specialization": "unresolved",
+      "architecture_primary": "unresolved",
+      "confidence": "low",
+      "rationale": "Classifier error; retained for review: ValueError: invalid specialization"
+    }
+  },
+  {
+    "system_id": "Starlight143/crucible::system::0002",
+    "repository": "Starlight143/crucible",
+    "classification": {
+      "specialization": "unresolved",
+      "architecture_primary": "unresolved",
+      "confidence": "low",
+      "rationale": "Classifier error; retained for review: ValueError: invalid specialization"
+    }
+  }
+]

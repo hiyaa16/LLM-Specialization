@@ -1,0 +1,33 @@
+====================================================================================================
+V2 GOLD-CASE CLASSIFICATION (gate before full 333 run)
+====================================================================================================
+[1/9] openai/openai-agents-python::system::0004
+[2/9] google/adk-python::system::0015
+[3/9] google/adk-python::system::0025
+[4/9] google/adk-python::system::0006
+[5/9] microsoft/autogen::system::0006
+[6/9] bhancockio/crewai-updated-tutorial-hierarchical::system::0001
+[7/9] ki11e6/langgraph-multi-agent::system::0001
+[8/9] FoundationAgents/MetaGPT::system::0001
+[9/9] agno-agi/agno::system::0012
+
+Saved: data\semantic_classifications_gold_v2.json
+
+----------------------------------------------------------------------------------------------------
+COMPARISON  (arch: gold | v1 | v2   spec: gold | v1 | v2   conf: v1 | v2)
+----------------------------------------------------------------------------------------------------
+GC   gold_arch               v1_arch             v2_arch             A  gold_sp  v1_sp   v2_sp   S  v1_cf  v2_cf  
+GC01 conditional_routing     conditional_routing conditional_routing OK medium   high    high    XX high   high   
+GC02 hierarchical            hierarchical        hierarchical        OK high     high    medium  XX high   high   
+GC03 parallel                sequential          sequential          XX high     medium  medium  XX high   high   
+GC04 sequential              sequential          sequential          OK low      low     high    XX high   high   
+GC05 iterative_feedback      iterative_feedback  iterative_feedback  OK high     high    high    OK high   high   
+GC06 hierarchical            hierarchical        hierarchical        OK high     high    high    OK high   high   
+GC07 conditional_graph       conditional_routing iterative_feedback  XX high     high    high    OK high   high   
+GC08 event_driven            sequential          sequential          XX high     high    high    OK high   high   
+GC09 hierarchical_nested_teamsequential          sequential          XX -        high    high    OK high   high   
+GC10 (negative control / no system)
+----------------------------------------------------------------------------------------------------
+architecture: fixed by V2 = 0, regressed by V2 = 1
+Gate: proceed to full 333 only if the 3 known errors (GC03/GC08/GC09) are fixed
+and nothing that was correct in V1 regressed.
